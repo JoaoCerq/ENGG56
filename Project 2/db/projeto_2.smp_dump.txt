@@ -1,0 +1,12 @@
+
+State Machine - |TOP|FSM:InstFSM|current_state
+Name current_state.IDLE_2 current_state.SAVING current_state.ADDING current_state.ADD current_state.LOAD current_state.IDLE_1 current_state.SOLICITA_MEM current_state.INICIO current_state.READY 
+current_state.INICIO 0 0 0 0 0 0 0 0 0 
+current_state.SOLICITA_MEM 0 0 0 0 0 0 1 1 0 
+current_state.IDLE_1 0 0 0 0 0 1 0 1 0 
+current_state.LOAD 0 0 0 0 1 0 0 1 0 
+current_state.ADD 0 0 0 1 0 0 0 1 0 
+current_state.ADDING 0 0 1 0 0 0 0 1 0 
+current_state.SAVING 0 1 0 0 0 0 0 1 0 
+current_state.IDLE_2 1 0 0 0 0 0 0 1 0 
+current_state.READY 0 0 0 0 0 0 0 1 1 

@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog  -work work +incdir+/home/joao-cerqueira/Documents/ENGG56 {/home/joao-cerqueira/Documents/ENGG56/TOP.v}
+vlog  -work work +incdir+/home/joao-cerqueira/Documents/ENGG56 {/home/joao-cerqueira/Documents/ENGG56/Acumulador.v}
+vlog  -work work +incdir+/home/joao-cerqueira/Documents/ENGG56 {/home/joao-cerqueira/Documents/ENGG56/FSM.v}
+

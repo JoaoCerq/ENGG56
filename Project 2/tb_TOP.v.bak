@@ -1,0 +1,109 @@
+`timescale 1ns / 1ps
+
+module tb_TOP;
+
+    // ------------------------------------------------
+    // 1. Declaração de Sinais
+    // ------------------------------------------------
+    reg Clock;
+    reg Reset;
+    
+    // Sinais para conectar no TOP
+    wire Ready;
+    wire [4:0] Address;
+    wire [15:0] DataIN;  // Dado que o TOP quer escrever na memória
+    wire ReadEnable;
+    wire WriteEnable;
+    wire [15:0] DataOut; // Dado que a memória envia para o TOP
+
+    // ------------------------------------------------
+    // 2. Instância do TOP (Device Under Test)
+    // ------------------------------------------------
+    TOP uut (
+        .Clock(Clock), 
+        .Reset(Reset), 
+        .Ready(Ready), 
+        .Address(Address), 
+        .DataIN(DataIN), 
+        .ReadEnable(ReadEnable), 
+        .WriteEnable(WriteEnable), 
+        .DataOut(DataOut)
+    );
+
+    // ------------------------------------------------
+    // 3. Modelo da Memória RAM (SRAM 32x16)
+    // ------------------------------------------------
+    reg [15:0] MEMORIA [0:31];
+    integer k;
+
+    // Leitura da Memória (Assíncrona ou Síncrona rápida)
+    // Se ReadEnable estiver ativo, joga o dado no barramento DataOut
+    assign DataOut = (ReadEnable) ? MEMORIA[Address] : 16'bz;
+
+    // Escrita na Memória (Síncrona na borda do clock)
+    always @(posedge Clock) begin
+        if (WriteEnable) begin
+            MEMORIA[Address] <= DataIN;
+            $display("MEMORIA: Escreveu %d no Endereco %d", DataIN, Address);
+        end
+    end
+
+    // ------------------------------------------------
+    // 4. Geração de Clock (Período = 20ns -> 50MHz)
+    // ------------------------------------------------
+    initial begin
+        Clock = 0;
+        forever #10 Clock = ~Clock;
+    end
+
+    // ------------------------------------------------
+    // 5. Teste Principal
+    // ------------------------------------------------
+    initial begin
+        // A) Inicialização da Memória com dados de teste
+        // Vamos preencher com '1' para facilitar a soma.
+        // Grupo 1 (0-6): Tudo 1. Soma esperada = 7.
+        // Grupo 2 (8-14): Tudo 2. Soma esperada = 14.
+        for (k = 0; k < 32; k = k + 1) begin
+            MEMORIA[k] = 16'd1; // Padrão: 1
+        end
+        
+        // Ajustando Grupo 2 para ter valor 2
+        for (k = 8; k <= 14; k = k + 1) MEMORIA[k] = 16'd2;
+        
+        // Ajustando Grupo 3 para ter valor 10
+        for (k = 16; k <= 22; k = k + 1) MEMORIA[k] = 16'd10;
+
+        // B) Reset do Sistema
+        $display("--- Inicio da Simulacao ---");
+        Reset = 0; // Ativa Reset (assumindo ativo baixo na sua lógica, ou ajuste aqui)
+        // Nota: Seu FSM usa "!Reset" no if, então Reset=0 reseta.
+        #50;
+        Reset = 1; // Solta Reset
+        
+        // C) Aguarda o sinal Ready
+        wait(Ready == 1);
+        
+        // Aguarda mais um pouco para estabilizar
+        @(posedge Clock);
+        
+        // D) Verificação dos Resultados
+        $display("--- Verificacao dos Resultados ---");
+        
+        // Checa endereço 7 (Soma de 0 a 6 -> 1+1+1+1+1+1+1 = 7)
+        if (MEMORIA[7] === 16'd7) $display("[PASS] Grupo 1 (End 7): %d (Esperado 7)", MEMORIA[7]);
+        else $display("[FAIL] Grupo 1 (End 7): %d (Esperado 7)", MEMORIA[7]);
+
+        // Checa endereço 15 (Soma de 8 a 14 -> 2*7 = 14)
+        if (MEMORIA[15] === 16'd14) $display("[PASS] Grupo 2 (End 15): %d (Esperado 14)", MEMORIA[15]);
+        else $display("[FAIL] Grupo 2 (End 15): %d (Esperado 14)", MEMORIA[15]);
+
+        // Checa endereço 23 (Soma de 16 a 22 -> 10*7 = 70)
+        if (MEMORIA[23] === 16'd70) $display("[PASS] Grupo 3 (End 23): %d (Esperado 70)", MEMORIA[23]);
+        else $display("[FAIL] Grupo 3 (End 23): %d (Esperado 70)", MEMORIA[23]);
+
+        $display("--- Fim da Simulacao ---");
+        $stop;
+    end
+
+endmodule

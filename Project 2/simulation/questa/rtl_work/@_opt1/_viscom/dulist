@@ -1,0 +1,4 @@
+2 10 Acumulador 4 fast 74 /home/joao-cerqueira/Documents/ENGG56/Project 2/simulation/questa/rtl_work 0 0 0 0 68 0
+2 3 FSM 4 fast 74 /home/joao-cerqueira/Documents/ENGG56/Project 2/simulation/questa/rtl_work 0 0 0 0 180 0
+2 3 TOP 4 fast 74 /home/joao-cerqueira/Documents/ENGG56/Project 2/simulation/questa/rtl_work 0 0 0 0 35 0
+1 6 tb_TOP 4 fast 74 /home/joao-cerqueira/Documents/ENGG56/Project 2/simulation/questa/rtl_work 0 0 180224 0 299 0

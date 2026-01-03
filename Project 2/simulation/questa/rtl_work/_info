@@ -1,0 +1,150 @@
+m255
+K4
+z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+!s12c _opt
+R1
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/joao-cerqueira/Documents/ENGG56/Project 2/simulation/questa
+T_opt
+!i145 1
+!i144 0
+Z3 !s110 1767482093
+VOLFEN9;OkGfY3Vnk=G19J0
+Z4 04 6 4 work tb_TOP fast 0
+=1-0045e296ff67-6959a2ed-ce1e6-1e38f
+R1
+Z5 !s12f OEM100
+Z6 !s12b OEM100
+Z7 !s124 OEM10U4 
+Z8 !s135 nogc
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z9 tCvgOpt 0
+n@_opt
+Z10 OL;O;2025.2;82
+R2
+T_opt1
+!i145 1
+!i144 0
+!s110 1767482285
+V1;1S?QdnIn>8>H0CIM9El0
+R4
+=1-0045e296ff67-6959a3ad-c8736-1e524
+R1
+R5
+R6
+R7
+R8
+o-quiet -auto_acc_if_foreign -work work +acc
+R9
+n@_opt1
+R10
+vAcumulador
+2/home/joao-cerqueira/Documents/ENGG56/Project 2/Acumulador.v
+R3
+!i10b 1
+!s100 D4RQ^XCOU=@LnkcM^==;I0
+Ink5`@g2_PIF6XEe0E^I`n0
+R2
+w1767401496
+8/home/joao-cerqueira/Documents/ENGG56/Project 2/Acumulador.v
+F/home/joao-cerqueira/Documents/ENGG56/Project 2/Acumulador.v
+!i122 1
+L0 1 30
+Z11 VDg1SIo80bB@j0V0VzS_@n1
+Z12 OL;L;2025.2;82
+r1
+!s85 0
+31
+Z13 !s108 1767482093.000000
+!s107 /home/joao-cerqueira/Documents/ENGG56/Project 2/Acumulador.v|
+!s90 -reportprogress|300|-work|work|+incdir+/home/joao-cerqueira/Documents/ENGG56/Project 2|/home/joao-cerqueira/Documents/ENGG56/Project 2/Acumulador.v|
+!i113 0
+Z14 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z15 !s92 -work work {+incdir+/home/joao-cerqueira/Documents/ENGG56/Project 2} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R9
+n@acumulador
+vFSM
+2/home/joao-cerqueira/Documents/ENGG56/Project 2/FSM.v
+R3
+!i10b 1
+!s100 ZOGfkjc>?4`X:kk05gSN@1
+ILe3d@3MY2ig9I?iZaJ<Si1
+R2
+w1767418220
+8/home/joao-cerqueira/Documents/ENGG56/Project 2/FSM.v
+F/home/joao-cerqueira/Documents/ENGG56/Project 2/FSM.v
+!i122 2
+L0 1 117
+R11
+R12
+r1
+!s85 0
+31
+R13
+!s107 /home/joao-cerqueira/Documents/ENGG56/Project 2/FSM.v|
+!s90 -reportprogress|300|-work|work|+incdir+/home/joao-cerqueira/Documents/ENGG56/Project 2|/home/joao-cerqueira/Documents/ENGG56/Project 2/FSM.v|
+!i113 0
+R14
+R15
+R9
+n@f@s@m
+vtb_TOP
+2/home/joao-cerqueira/Documents/ENGG56/Project 2/tb_TOP.v
+!s110 1767482269
+!i10b 1
+!s100 E]Vcl>V2aP67UIHXJ2W:e0
+Ii;kFCNl:KJhdMfYD8j^kY0
+R2
+w1767482233
+8/home/joao-cerqueira/Documents/ENGG56/Project 2/tb_TOP.v
+F/home/joao-cerqueira/Documents/ENGG56/Project 2/tb_TOP.v
+!i122 6
+L0 3 107
+R11
+R12
+r1
+!s85 0
+31
+!s108 1767482269.000000
+!s107 /home/joao-cerqueira/Documents/ENGG56/Project 2/tb_TOP.v|
+!s90 -reportprogress|300|-work|work|+incdir+/home/joao-cerqueira/Documents/ENGG56/Project 2|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|/home/joao-cerqueira/Documents/ENGG56/Project 2/tb_TOP.v|
+!i113 0
+R14
+R15
+R9
+ntb_@t@o@p
+vTOP
+2/home/joao-cerqueira/Documents/ENGG56/Project 2/TOP.v
+R3
+!i10b 1
+!s100 AVjlZI?^bR7@:L>n_Y[TY0
+IP71<g84c96kLBZBN1NW:O2
+R2
+w1767401504
+8/home/joao-cerqueira/Documents/ENGG56/Project 2/TOP.v
+F/home/joao-cerqueira/Documents/ENGG56/Project 2/TOP.v
+!i122 0
+L0 1 20
+R11
+R12
+r1
+!s85 0
+31
+R13
+!s107 /home/joao-cerqueira/Documents/ENGG56/Project 2/TOP.v|
+!s90 -reportprogress|300|-work|work|+incdir+/home/joao-cerqueira/Documents/ENGG56/Project 2|/home/joao-cerqueira/Documents/ENGG56/Project 2/TOP.v|
+!i113 0
+R14
+R15
+R9
+n@t@o@p
