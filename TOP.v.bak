@@ -1,0 +1,27 @@
+module TOP (Clock, Reset, Ready, Address, DataIN, ReadEnable, WriteEnable, DataOut);
+	input wire Clock;
+   input wire Reset;
+   output wire Ready;
+   output wire [4:0] Address;
+   output wire [15:0] DataIN;
+   output wire ReadEnable;
+   output wire WriteEnabl;
+   input wire [15:0] DataOut;
+
+   wire acc_load;      // LOAD: carrega M[15:0] no reg B
+   wire acc_clear;     // CLEAR: zera reg A
+   wire acc_transfer;  // TRANSFER: A <- A + B
+
+   wire [15:0] acc_out;
+
+   Acumulador u_acc (.clk(Clock), .reset(Reset), .load(acc_load), .clear(acc_clear), .transfer(acc_transfer), .din(DataOut), .acc(acc_out));
+
+    // ===== Data de escrita na SRAM =====
+    // A escrita ocorre somente quando WriteEnable=1, controlado pela FSM.
+    assign DataIN = acc_out;
+
+    // ===== Instância da FSM (controla SRAM e o Acumulador) =====
+    FSM u_fsm (.clk(Clock), .reset(Reset), .mem_addr(Address), .mem_re(ReadEnable), .mem_we(WriteEnable), .mem_dout(DataOut),.acc_value(acc_out),        // opcional, se a FSM quiser "ver" A
+        .acc_load(acc_load), .acc_clear(acc_clear), .acc_transfer(acc_transfer), .ready(Ready));
+
+endmodule
