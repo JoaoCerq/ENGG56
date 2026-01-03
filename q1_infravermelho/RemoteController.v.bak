@@ -1,0 +1,76 @@
+module RemoteController (
+    input clk,
+    input rst,
+    input serial,
+    output reg [7:0] tecla,
+    output reg ready
+);
+
+    // Definição dos Estados
+    parameter IDLE         = 3'd0,
+              RECEIVE_DATA = 3'd1,
+              VALIDATE     = 3'd2,
+              PULSE_READY  = 3'd3;
+
+    reg [2:0] state;
+    reg [5:0] bit_count;      // Contador para os 34 bits do frame
+    reg [33:0] shift_reg;     // Armazena o frame completo
+    reg [1:0] ready_counter;  // Contador para os 3 pulsos de Ready
+
+    // Lógica de Transição de Estados e Captura
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            state <= IDLE;
+            bit_count <= 0;
+            ready <= 0;
+            tecla <= 8'h00;
+            ready_counter <= 0;
+        end else begin
+            case (state)
+                IDLE: begin
+                    ready <= 0;
+                    ready_counter <= 0;
+                    // O frame começa quando serial sai de 1 para 0 (Lead Code)
+                    if (serial == 1'b0) begin
+                        state <= RECEIVE_DATA;
+                        bit_count <= 0;
+                        shift_reg <= 34'd0;
+                    end
+                end
+
+                RECEIVE_DATA: begin
+                    shift_reg[33 - bit_count] <= serial;
+                    if (bit_count == 33) begin
+                        state <= VALIDATE;
+                    end else begin
+                        bit_count <= bit_count + 1'b1;
+                    end
+                end
+
+                VALIDATE: begin
+                    // shift_reg[33] = Lead, [32:17] = Custom, [16:9] = Key, [8:1] = InvKey, [0] = End
+                    // Verifica se Key Code é o inverso de Inv Key Code
+                    if (shift_reg[16:9] == ~shift_reg[8:1]) begin
+                        tecla <= shift_reg[16:9];
+                        state <= PULSE_READY;
+                    end else begin
+                        state <= IDLE; // Dado inválido, volta ao início
+                    end
+                end
+
+                PULSE_READY: begin
+                    if (ready_counter < 3) begin
+                        ready <= 1'b1;
+                        ready_counter <= ready_counter + 1'b1;
+                    end else begin
+                        ready <= 1'b0;
+                        state <= IDLE;
+                    end
+                end
+
+                default: state <= IDLE;
+            endcase
+        end
+    end
+
+endmodule

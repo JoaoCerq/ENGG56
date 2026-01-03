@@ -1,0 +1,10 @@
+
+State Machine - |RemoteController|state
+Name state.READY_PULSE state.VALIDATE state.WAIT_END state.WAIT_INV_KEY state.WAIT_KEY state.WAIT_CUSTOM state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 
+state.WAIT_CUSTOM 0 0 0 0 0 1 1 
+state.WAIT_KEY 0 0 0 0 1 0 1 
+state.WAIT_INV_KEY 0 0 0 1 0 0 1 
+state.WAIT_END 0 0 1 0 0 0 1 
+state.VALIDATE 0 1 0 0 0 0 1 
+state.READY_PULSE 1 0 0 0 0 0 1 

@@ -1,0 +1,9 @@
+
+State Machine - |FSM_Control|current_state
+Name current_state.S_DONE current_state.S_ACCUM current_state.S_WAIT_DATA current_state.S_ACT_RE current_state.S_SEND_ADDR current_state.S_IDLE 
+current_state.S_IDLE 0 0 0 0 0 0 
+current_state.S_SEND_ADDR 0 0 0 0 1 1 
+current_state.S_ACT_RE 0 0 0 1 0 1 
+current_state.S_WAIT_DATA 0 0 1 0 0 1 
+current_state.S_ACCUM 0 1 0 0 0 1 
+current_state.S_DONE 1 0 0 0 0 1 

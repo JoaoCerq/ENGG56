@@ -1,0 +1,1163 @@
+Timing Analyzer report for q1_infravermelho
+Tue Dec 30 16:30:17 2025
+Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1200mV 85C Model Setup Summary
+  9. Slow 1200mV 85C Model Hold Summary
+ 10. Slow 1200mV 85C Model Recovery Summary
+ 11. Slow 1200mV 85C Model Removal Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1200mV 85C Model Setup: 'Clock'
+ 14. Slow 1200mV 85C Model Hold: 'Clock'
+ 15. Slow 1200mV 85C Model Metastability Summary
+ 16. Slow 1200mV 0C Model Fmax Summary
+ 17. Slow 1200mV 0C Model Setup Summary
+ 18. Slow 1200mV 0C Model Hold Summary
+ 19. Slow 1200mV 0C Model Recovery Summary
+ 20. Slow 1200mV 0C Model Removal Summary
+ 21. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 22. Slow 1200mV 0C Model Setup: 'Clock'
+ 23. Slow 1200mV 0C Model Hold: 'Clock'
+ 24. Slow 1200mV 0C Model Metastability Summary
+ 25. Fast 1200mV 0C Model Setup Summary
+ 26. Fast 1200mV 0C Model Hold Summary
+ 27. Fast 1200mV 0C Model Recovery Summary
+ 28. Fast 1200mV 0C Model Removal Summary
+ 29. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 30. Fast 1200mV 0C Model Setup: 'Clock'
+ 31. Fast 1200mV 0C Model Hold: 'Clock'
+ 32. Fast 1200mV 0C Model Metastability Summary
+ 33. Multicorner Timing Analysis Summary
+ 34. Board Trace Model Assignments
+ 35. Input Transition Times
+ 36. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 37. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 38. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++---------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                         ;
++-----------------------+---------------------------------------------------------+
+; Quartus Prime Version ; Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                  ;
+; Revision Name         ; q1_infravermelho                                        ;
+; Device Family         ; Cyclone IV E                                            ;
+; Device Name           ; EP4CE115F29C7                                           ;
+; Timing Models         ; Final                                                   ;
+; Delay Model           ; Combined                                                ;
+; Rise/Fall Delays      ; Enabled                                                 ;
++-----------------------+---------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.05        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   1.1%      ;
+;     Processors 3-12        ;   0.4%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------+
+; SDC File List                                                ;
++--------------------------+--------+--------------------------+
+; SDC File Path            ; Status ; Read at                  ;
++--------------------------+--------+--------------------------+
+; q1_infravermelho.out.sdc ; OK     ; Tue Dec 30 16:30:16 2025 ;
++--------------------------+--------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                           ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock      ; Base ; 10.000 ; 100.0 MHz ; 0.000 ; 5.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Clock } ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 105.53 MHz ; 105.53 MHz      ; Clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; Clock ; 0.524 ; 0.000               ;
++-------+-------+---------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; Clock ; 0.402 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+-------+-----------------------------------+
+; Clock ; Slack ; End Point TNS                     ;
++-------+-------+-----------------------------------+
+; Clock ; 4.734 ; 0.000                             ;
++-------+-------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'Clock'                                                                                                          ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.524 ; state.READY_PULSE~_Duplicate_1 ; Tecla[4]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 5.365      ;
+; 0.686 ; tecla_storage[4]               ; Tecla[4]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 5.203      ;
+; 1.417 ; state.READY_PULSE~_Duplicate_1 ; Tecla[5]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 4.472      ;
+; 1.438 ; state.READY_PULSE~_Duplicate_1 ; Tecla[2]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 4.451      ;
+; 1.473 ; state.READY_PULSE~_Duplicate_1 ; Tecla[0]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 4.416      ;
+; 1.474 ; state.READY_PULSE~_Duplicate_1 ; Tecla[1]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 4.415      ;
+; 1.523 ; state.READY_PULSE~_Duplicate_1 ; Tecla[7]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 4.366      ;
+; 1.546 ; state.READY_PULSE~_Duplicate_1 ; Tecla[6]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 4.343      ;
+; 1.589 ; tecla_storage[0]               ; Tecla[0]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 4.300      ;
+; 1.593 ; tecla_storage[1]               ; Tecla[1]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 4.296      ;
+; 1.610 ; state.READY_PULSE~_Duplicate_1 ; Tecla[3]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 4.279      ;
+; 1.641 ; tecla_storage[7]               ; Tecla[7]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 4.248      ;
+; 1.661 ; tecla_storage[6]               ; Tecla[6]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 4.228      ;
+; 1.726 ; tecla_storage[3]               ; Tecla[3]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 4.163      ;
+; 1.944 ; tecla_storage[5]               ; Tecla[5]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 3.945      ;
+; 1.965 ; tecla_storage[2]               ; Tecla[2]                       ; Clock        ; Clock       ; 10.000       ; -3.091     ; 3.924      ;
+; 2.925 ; state.READY_PULSE              ; Ready                          ; Clock        ; Clock       ; 10.000       ; -3.047     ; 3.008      ;
+; 4.002 ; Reset                          ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; 2.954      ; 7.835      ;
+; 4.074 ; Serial                         ; state.WAIT_END                 ; Clock        ; Clock       ; 10.000       ; 2.975      ; 7.899      ;
+; 4.077 ; Serial                         ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 10.000       ; 2.975      ; 7.896      ;
+; 4.451 ; Reset                          ; state.WAIT_END                 ; Clock        ; Clock       ; 10.000       ; 2.975      ; 7.522      ;
+; 4.453 ; Reset                          ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 10.000       ; 2.975      ; 7.520      ;
+; 4.744 ; Reset                          ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 10.000       ; 2.975      ; 7.229      ;
+; 4.833 ; Reset                          ; state.WAIT_KEY                 ; Clock        ; Clock       ; 10.000       ; 2.975      ; 7.140      ;
+; 4.877 ; Reset                          ; key_reg[0]                     ; Clock        ; Clock       ; 10.000       ; 2.977      ; 7.098      ;
+; 4.877 ; Reset                          ; key_reg[3]                     ; Clock        ; Clock       ; 10.000       ; 2.977      ; 7.098      ;
+; 4.877 ; Reset                          ; key_reg[2]                     ; Clock        ; Clock       ; 10.000       ; 2.977      ; 7.098      ;
+; 4.877 ; Reset                          ; key_reg[1]                     ; Clock        ; Clock       ; 10.000       ; 2.977      ; 7.098      ;
+; 4.877 ; Reset                          ; key_reg[5]                     ; Clock        ; Clock       ; 10.000       ; 2.977      ; 7.098      ;
+; 4.877 ; Reset                          ; key_reg[4]                     ; Clock        ; Clock       ; 10.000       ; 2.977      ; 7.098      ;
+; 4.877 ; Reset                          ; key_reg[6]                     ; Clock        ; Clock       ; 10.000       ; 2.977      ; 7.098      ;
+; 4.877 ; Reset                          ; key_reg[7]                     ; Clock        ; Clock       ; 10.000       ; 2.977      ; 7.098      ;
+; 4.880 ; Reset                          ; inv_key_reg[0]                 ; Clock        ; Clock       ; 10.000       ; 2.976      ; 7.094      ;
+; 4.880 ; Reset                          ; inv_key_reg[3]                 ; Clock        ; Clock       ; 10.000       ; 2.976      ; 7.094      ;
+; 4.880 ; Reset                          ; inv_key_reg[2]                 ; Clock        ; Clock       ; 10.000       ; 2.976      ; 7.094      ;
+; 4.880 ; Reset                          ; inv_key_reg[1]                 ; Clock        ; Clock       ; 10.000       ; 2.976      ; 7.094      ;
+; 4.880 ; Reset                          ; inv_key_reg[4]                 ; Clock        ; Clock       ; 10.000       ; 2.976      ; 7.094      ;
+; 4.880 ; Reset                          ; inv_key_reg[5]                 ; Clock        ; Clock       ; 10.000       ; 2.976      ; 7.094      ;
+; 4.880 ; Reset                          ; inv_key_reg[6]                 ; Clock        ; Clock       ; 10.000       ; 2.976      ; 7.094      ;
+; 4.880 ; Reset                          ; inv_key_reg[7]                 ; Clock        ; Clock       ; 10.000       ; 2.976      ; 7.094      ;
+; 4.927 ; Reset                          ; tecla_storage[6]               ; Clock        ; Clock       ; 10.000       ; 2.978      ; 7.049      ;
+; 4.940 ; Reset                          ; bit_count[0]                   ; Clock        ; Clock       ; 10.000       ; 2.974      ; 7.032      ;
+; 4.959 ; Reset                          ; bit_count[1]                   ; Clock        ; Clock       ; 10.000       ; 2.974      ; 7.013      ;
+; 4.996 ; Serial                         ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 10.000       ; 2.975      ; 6.977      ;
+; 5.001 ; Reset                          ; state.READY_PULSE~_Duplicate_1 ; Clock        ; Clock       ; 10.000       ; 2.978      ; 6.975      ;
+; 5.085 ; Serial                         ; state.WAIT_KEY                 ; Clock        ; Clock       ; 10.000       ; 2.975      ; 6.888      ;
+; 5.113 ; Reset                          ; tecla_storage[1]               ; Clock        ; Clock       ; 10.000       ; 2.978      ; 6.863      ;
+; 5.123 ; Reset                          ; bit_count[2]                   ; Clock        ; Clock       ; 10.000       ; 2.974      ; 6.849      ;
+; 5.125 ; Reset                          ; tecla_storage[2]               ; Clock        ; Clock       ; 10.000       ; 2.978      ; 6.851      ;
+; 5.154 ; Reset                          ; bit_count[3]                   ; Clock        ; Clock       ; 10.000       ; 2.974      ; 6.818      ;
+; 5.276 ; Reset                          ; tecla_storage[3]               ; Clock        ; Clock       ; 10.000       ; 2.978      ; 6.700      ;
+; 5.276 ; Reset                          ; tecla_storage[5]               ; Clock        ; Clock       ; 10.000       ; 2.978      ; 6.700      ;
+; 5.311 ; Reset                          ; tecla_storage[0]               ; Clock        ; Clock       ; 10.000       ; 2.978      ; 6.665      ;
+; 5.311 ; Reset                          ; tecla_storage[4]               ; Clock        ; Clock       ; 10.000       ; 2.978      ; 6.665      ;
+; 5.381 ; Reset                          ; state.IDLE                     ; Clock        ; Clock       ; 10.000       ; 2.978      ; 6.595      ;
+; 5.512 ; Serial                         ; key_reg[0]                     ; Clock        ; Clock       ; 10.000       ; 2.977      ; 6.463      ;
+; 5.647 ; inv_key_reg[1]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.103     ; 4.133      ;
+; 5.793 ; inv_key_reg[0]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.103     ; 3.987      ;
+; 5.806 ; Reset                          ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; 2.978      ; 6.170      ;
+; 5.828 ; inv_key_reg[7]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.103     ; 3.952      ;
+; 5.847 ; key_reg[1]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.104     ; 3.932      ;
+; 5.992 ; key_reg[7]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.104     ; 3.787      ;
+; 6.037 ; Serial                         ; state.IDLE                     ; Clock        ; Clock       ; 10.000       ; 2.978      ; 5.939      ;
+; 6.051 ; inv_key_reg[2]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.103     ; 3.729      ;
+; 6.052 ; key_reg[4]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.104     ; 3.727      ;
+; 6.062 ; key_reg[5]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.104     ; 3.717      ;
+; 6.078 ; inv_key_reg[5]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.103     ; 3.702      ;
+; 6.086 ; inv_key_reg[1]                 ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.833      ;
+; 6.086 ; inv_key_reg[1]                 ; tecla_storage[0]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.833      ;
+; 6.086 ; inv_key_reg[1]                 ; tecla_storage[1]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.833      ;
+; 6.086 ; inv_key_reg[1]                 ; tecla_storage[2]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.833      ;
+; 6.086 ; inv_key_reg[1]                 ; tecla_storage[3]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.833      ;
+; 6.086 ; inv_key_reg[1]                 ; tecla_storage[4]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.833      ;
+; 6.086 ; inv_key_reg[1]                 ; tecla_storage[5]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.833      ;
+; 6.086 ; inv_key_reg[1]                 ; tecla_storage[6]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.833      ;
+; 6.111 ; inv_key_reg[6]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.103     ; 3.669      ;
+; 6.135 ; key_reg[6]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.104     ; 3.644      ;
+; 6.173 ; key_reg[0]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.104     ; 3.606      ;
+; 6.196 ; Serial                         ; inv_key_reg[0]                 ; Clock        ; Clock       ; 10.000       ; 2.976      ; 5.778      ;
+; 6.204 ; Reset                          ; state.VALIDATE                 ; Clock        ; Clock       ; 10.000       ; 2.975      ; 5.769      ;
+; 6.212 ; inv_key_reg[3]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.103     ; 3.568      ;
+; 6.240 ; state.READY_PULSE~_Duplicate_1 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.105     ; 3.538      ;
+; 6.241 ; inv_key_reg[4]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.103     ; 3.539      ;
+; 6.242 ; inv_key_reg[0]                 ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.677      ;
+; 6.242 ; inv_key_reg[0]                 ; tecla_storage[0]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.677      ;
+; 6.242 ; inv_key_reg[0]                 ; tecla_storage[1]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.677      ;
+; 6.242 ; inv_key_reg[0]                 ; tecla_storage[2]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.677      ;
+; 6.242 ; inv_key_reg[0]                 ; tecla_storage[3]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.677      ;
+; 6.242 ; inv_key_reg[0]                 ; tecla_storage[4]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.677      ;
+; 6.242 ; inv_key_reg[0]                 ; tecla_storage[5]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.677      ;
+; 6.242 ; inv_key_reg[0]                 ; tecla_storage[6]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.677      ;
+; 6.244 ; key_reg[2]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.104     ; 3.535      ;
+; 6.252 ; Reset                          ; pulse_count[0]                 ; Clock        ; Clock       ; 10.000       ; 2.974      ; 5.720      ;
+; 6.252 ; Reset                          ; pulse_count[1]                 ; Clock        ; Clock       ; 10.000       ; 2.974      ; 5.720      ;
+; 6.258 ; Serial                         ; state.VALIDATE                 ; Clock        ; Clock       ; 10.000       ; 2.975      ; 5.715      ;
+; 6.274 ; inv_key_reg[7]                 ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.645      ;
+; 6.274 ; inv_key_reg[7]                 ; tecla_storage[0]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.645      ;
+; 6.274 ; inv_key_reg[7]                 ; tecla_storage[1]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.645      ;
+; 6.274 ; inv_key_reg[7]                 ; tecla_storage[2]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.645      ;
+; 6.274 ; inv_key_reg[7]                 ; tecla_storage[3]               ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.645      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'Clock'                                                                                                           ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.402 ; pulse_count[0]                 ; pulse_count[0]                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state.WAIT_KEY                 ; state.WAIT_KEY                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state.WAIT_CUSTOM              ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; pulse_count[1]                 ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state.WAIT_INV_KEY             ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state.WAIT_END                 ; state.WAIT_END                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; bit_count[2]                   ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; bit_count[1]                   ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.669      ;
+; 0.407 ; bit_count[0]                   ; bit_count[0]                   ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.674      ;
+; 0.429 ; key_reg[0]                     ; key_reg[1]                     ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.696      ;
+; 0.435 ; key_reg[1]                     ; key_reg[2]                     ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.702      ;
+; 0.436 ; key_reg[5]                     ; key_reg[6]                     ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.703      ;
+; 0.436 ; key_reg[3]                     ; key_reg[4]                     ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.703      ;
+; 0.436 ; key_reg[2]                     ; key_reg[3]                     ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.703      ;
+; 0.449 ; bit_count[0]                   ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.716      ;
+; 0.451 ; inv_key_reg[0]                 ; inv_key_reg[1]                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.718      ;
+; 0.452 ; inv_key_reg[5]                 ; inv_key_reg[6]                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.719      ;
+; 0.452 ; inv_key_reg[4]                 ; inv_key_reg[5]                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.719      ;
+; 0.452 ; inv_key_reg[2]                 ; inv_key_reg[3]                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.719      ;
+; 0.452 ; bit_count[0]                   ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.719      ;
+; 0.458 ; state.WAIT_END                 ; state.VALIDATE                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.725      ;
+; 0.473 ; state.WAIT_KEY                 ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.740      ;
+; 0.561 ; key_reg[6]                     ; key_reg[7]                     ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.828      ;
+; 0.573 ; inv_key_reg[3]                 ; inv_key_reg[4]                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.840      ;
+; 0.575 ; inv_key_reg[1]                 ; inv_key_reg[2]                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.842      ;
+; 0.636 ; state.WAIT_INV_KEY             ; state.WAIT_END                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.903      ;
+; 0.642 ; key_reg[4]                     ; key_reg[5]                     ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.909      ;
+; 0.680 ; bit_count[1]                   ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.947      ;
+; 0.705 ; inv_key_reg[6]                 ; inv_key_reg[7]                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.972      ;
+; 0.717 ; pulse_count[0]                 ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.984      ;
+; 0.851 ; state.IDLE                     ; pulse_count[0]                 ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.114      ;
+; 0.881 ; state.WAIT_END                 ; pulse_count[0]                 ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.147      ;
+; 0.885 ; state.READY_PULSE~_Duplicate_1 ; state.READY_PULSE~_Duplicate_1 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.152      ;
+; 1.015 ; bit_count[0]                   ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.282      ;
+; 1.110 ; key_reg[0]                     ; tecla_storage[0]               ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.378      ;
+; 1.120 ; bit_count[2]                   ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.387      ;
+; 1.150 ; key_reg[1]                     ; tecla_storage[1]               ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.418      ;
+; 1.150 ; key_reg[3]                     ; tecla_storage[3]               ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.418      ;
+; 1.151 ; key_reg[5]                     ; tecla_storage[5]               ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.419      ;
+; 1.165 ; state.READY_PULSE~_Duplicate_1 ; pulse_count[0]                 ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.428      ;
+; 1.175 ; state.VALIDATE                 ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.442      ;
+; 1.177 ; state.VALIDATE                 ; state.WAIT_END                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.444      ;
+; 1.179 ; state.VALIDATE                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.084      ; 1.449      ;
+; 1.203 ; bit_count[3]                   ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.470      ;
+; 1.221 ; state.READY_PULSE~_Duplicate_1 ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.484      ;
+; 1.226 ; state.WAIT_END                 ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.492      ;
+; 1.230 ; bit_count[1]                   ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.497      ;
+; 1.280 ; pulse_count[1]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.085      ; 1.551      ;
+; 1.280 ; key_reg[3]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.548      ;
+; 1.296 ; key_reg[2]                     ; tecla_storage[2]               ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.564      ;
+; 1.322 ; key_reg[4]                     ; tecla_storage[4]               ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.590      ;
+; 1.333 ; state.IDLE                     ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 0.000        ; 0.078      ; 1.597      ;
+; 1.422 ; key_reg[6]                     ; tecla_storage[6]               ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.690      ;
+; 1.423 ; state.IDLE                     ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.686      ;
+; 1.449 ; state.IDLE                     ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.712      ;
+; 1.489 ; state.IDLE                     ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.752      ;
+; 1.492 ; state.WAIT_CUSTOM              ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.758      ;
+; 1.494 ; state.VALIDATE                 ; state.READY_PULSE~_Duplicate_1 ; Clock        ; Clock       ; 0.000        ; 0.084      ; 1.764      ;
+; 1.529 ; pulse_count[0]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.085      ; 1.800      ;
+; 1.532 ; state.WAIT_CUSTOM              ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.798      ;
+; 1.536 ; key_reg[2]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.804      ;
+; 1.611 ; inv_key_reg[4]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.083      ; 1.880      ;
+; 1.612 ; state.VALIDATE                 ; bit_count[0]                   ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.878      ;
+; 1.612 ; state.VALIDATE                 ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.878      ;
+; 1.612 ; state.VALIDATE                 ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.878      ;
+; 1.612 ; state.VALIDATE                 ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.878      ;
+; 1.612 ; state.WAIT_CUSTOM              ; state.WAIT_KEY                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.879      ;
+; 1.616 ; state.IDLE                     ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.879      ;
+; 1.617 ; inv_key_reg[3]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.083      ; 1.886      ;
+; 1.618 ; state.IDLE                     ; bit_count[0]                   ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.881      ;
+; 1.639 ; pulse_count[1]                 ; state.READY_PULSE~_Duplicate_1 ; Clock        ; Clock       ; 0.000        ; 0.085      ; 1.910      ;
+; 1.646 ; key_reg[6]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.914      ;
+; 1.656 ; key_reg[0]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.924      ;
+; 1.657 ; key_reg[5]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.925      ;
+; 1.659 ; state.WAIT_CUSTOM              ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.925      ;
+; 1.661 ; state.WAIT_CUSTOM              ; bit_count[0]                   ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.927      ;
+; 1.670 ; key_reg[4]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.938      ;
+; 1.703 ; state.WAIT_END                 ; state.WAIT_KEY                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.970      ;
+; 1.706 ; state.WAIT_KEY                 ; state.WAIT_END                 ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.973      ;
+; 1.724 ; inv_key_reg[6]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.083      ; 1.993      ;
+; 1.731 ; pulse_count[1]                 ; state.WAIT_KEY                 ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.999      ;
+; 1.736 ; inv_key_reg[5]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.083      ; 2.005      ;
+; 1.744 ; state.WAIT_END                 ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 0.000        ; 0.081      ; 2.011      ;
+; 1.757 ; inv_key_reg[2]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.083      ; 2.026      ;
+; 1.760 ; key_reg[7]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.082      ; 2.028      ;
+; 1.771 ; state.WAIT_KEY                 ; key_reg[7]                     ; Clock        ; Clock       ; 0.000        ; 0.083      ; 2.040      ;
+; 1.771 ; state.WAIT_KEY                 ; key_reg[6]                     ; Clock        ; Clock       ; 0.000        ; 0.083      ; 2.040      ;
+; 1.771 ; state.WAIT_KEY                 ; key_reg[5]                     ; Clock        ; Clock       ; 0.000        ; 0.083      ; 2.040      ;
+; 1.771 ; state.WAIT_KEY                 ; key_reg[4]                     ; Clock        ; Clock       ; 0.000        ; 0.083      ; 2.040      ;
+; 1.771 ; state.WAIT_KEY                 ; key_reg[3]                     ; Clock        ; Clock       ; 0.000        ; 0.083      ; 2.040      ;
+; 1.771 ; state.WAIT_KEY                 ; key_reg[2]                     ; Clock        ; Clock       ; 0.000        ; 0.083      ; 2.040      ;
+; 1.771 ; state.WAIT_KEY                 ; key_reg[1]                     ; Clock        ; Clock       ; 0.000        ; 0.083      ; 2.040      ;
+; 1.771 ; state.WAIT_KEY                 ; key_reg[0]                     ; Clock        ; Clock       ; 0.000        ; 0.083      ; 2.040      ;
+; 1.772 ; pulse_count[1]                 ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 0.000        ; 0.082      ; 2.040      ;
+; 1.785 ; state.WAIT_INV_KEY             ; inv_key_reg[7]                 ; Clock        ; Clock       ; 0.000        ; 0.082      ; 2.053      ;
+; 1.785 ; state.WAIT_INV_KEY             ; inv_key_reg[6]                 ; Clock        ; Clock       ; 0.000        ; 0.082      ; 2.053      ;
+; 1.785 ; state.WAIT_INV_KEY             ; inv_key_reg[5]                 ; Clock        ; Clock       ; 0.000        ; 0.082      ; 2.053      ;
+; 1.785 ; state.WAIT_INV_KEY             ; inv_key_reg[4]                 ; Clock        ; Clock       ; 0.000        ; 0.082      ; 2.053      ;
+; 1.785 ; state.WAIT_INV_KEY             ; inv_key_reg[3]                 ; Clock        ; Clock       ; 0.000        ; 0.082      ; 2.053      ;
+; 1.785 ; state.WAIT_INV_KEY             ; inv_key_reg[2]                 ; Clock        ; Clock       ; 0.000        ; 0.082      ; 2.053      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 116.97 MHz ; 116.97 MHz      ; Clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; Clock ; 1.451 ; 0.000              ;
++-------+-------+--------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; Clock ; 0.353 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; Clock ; 4.756 ; 0.000                            ;
++-------+-------+----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'Clock'                                                                                                           ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.451 ; state.READY_PULSE~_Duplicate_1 ; Tecla[4]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 4.721      ;
+; 1.603 ; tecla_storage[4]               ; Tecla[4]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 4.569      ;
+; 2.139 ; state.READY_PULSE~_Duplicate_1 ; Tecla[5]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 4.033      ;
+; 2.160 ; state.READY_PULSE~_Duplicate_1 ; Tecla[2]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 4.012      ;
+; 2.210 ; state.READY_PULSE~_Duplicate_1 ; Tecla[0]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 3.962      ;
+; 2.212 ; state.READY_PULSE~_Duplicate_1 ; Tecla[1]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 3.960      ;
+; 2.255 ; state.READY_PULSE~_Duplicate_1 ; Tecla[7]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 3.917      ;
+; 2.276 ; state.READY_PULSE~_Duplicate_1 ; Tecla[6]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 3.896      ;
+; 2.301 ; tecla_storage[0]               ; Tecla[0]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 3.871      ;
+; 2.304 ; tecla_storage[1]               ; Tecla[1]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 3.868      ;
+; 2.349 ; tecla_storage[7]               ; Tecla[7]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 3.823      ;
+; 2.354 ; state.READY_PULSE~_Duplicate_1 ; Tecla[3]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 3.818      ;
+; 2.370 ; tecla_storage[6]               ; Tecla[6]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 3.802      ;
+; 2.449 ; tecla_storage[3]               ; Tecla[3]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 3.723      ;
+; 2.629 ; tecla_storage[5]               ; Tecla[5]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 3.543      ;
+; 2.651 ; tecla_storage[2]               ; Tecla[2]                       ; Clock        ; Clock       ; 10.000       ; -2.808     ; 3.521      ;
+; 3.578 ; state.READY_PULSE              ; Ready                          ; Clock        ; Clock       ; 10.000       ; -2.759     ; 2.643      ;
+; 4.559 ; Reset                          ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; 2.678      ; 7.006      ;
+; 4.636 ; Serial                         ; state.WAIT_END                 ; Clock        ; Clock       ; 10.000       ; 2.705      ; 7.068      ;
+; 4.638 ; Serial                         ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 10.000       ; 2.705      ; 7.066      ;
+; 5.064 ; Reset                          ; state.WAIT_END                 ; Clock        ; Clock       ; 10.000       ; 2.705      ; 6.640      ;
+; 5.067 ; Reset                          ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 10.000       ; 2.705      ; 6.637      ;
+; 5.285 ; Reset                          ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 10.000       ; 2.705      ; 6.419      ;
+; 5.367 ; Reset                          ; state.WAIT_KEY                 ; Clock        ; Clock       ; 10.000       ; 2.705      ; 6.337      ;
+; 5.430 ; Reset                          ; key_reg[0]                     ; Clock        ; Clock       ; 10.000       ; 2.707      ; 6.276      ;
+; 5.430 ; Reset                          ; key_reg[3]                     ; Clock        ; Clock       ; 10.000       ; 2.707      ; 6.276      ;
+; 5.430 ; Reset                          ; key_reg[2]                     ; Clock        ; Clock       ; 10.000       ; 2.707      ; 6.276      ;
+; 5.430 ; Reset                          ; key_reg[1]                     ; Clock        ; Clock       ; 10.000       ; 2.707      ; 6.276      ;
+; 5.430 ; Reset                          ; key_reg[5]                     ; Clock        ; Clock       ; 10.000       ; 2.707      ; 6.276      ;
+; 5.430 ; Reset                          ; key_reg[4]                     ; Clock        ; Clock       ; 10.000       ; 2.707      ; 6.276      ;
+; 5.430 ; Reset                          ; key_reg[6]                     ; Clock        ; Clock       ; 10.000       ; 2.707      ; 6.276      ;
+; 5.430 ; Reset                          ; key_reg[7]                     ; Clock        ; Clock       ; 10.000       ; 2.707      ; 6.276      ;
+; 5.432 ; Reset                          ; inv_key_reg[0]                 ; Clock        ; Clock       ; 10.000       ; 2.706      ; 6.273      ;
+; 5.432 ; Reset                          ; inv_key_reg[3]                 ; Clock        ; Clock       ; 10.000       ; 2.706      ; 6.273      ;
+; 5.432 ; Reset                          ; inv_key_reg[2]                 ; Clock        ; Clock       ; 10.000       ; 2.706      ; 6.273      ;
+; 5.432 ; Reset                          ; inv_key_reg[1]                 ; Clock        ; Clock       ; 10.000       ; 2.706      ; 6.273      ;
+; 5.432 ; Reset                          ; inv_key_reg[4]                 ; Clock        ; Clock       ; 10.000       ; 2.706      ; 6.273      ;
+; 5.432 ; Reset                          ; inv_key_reg[5]                 ; Clock        ; Clock       ; 10.000       ; 2.706      ; 6.273      ;
+; 5.432 ; Reset                          ; inv_key_reg[6]                 ; Clock        ; Clock       ; 10.000       ; 2.706      ; 6.273      ;
+; 5.432 ; Reset                          ; inv_key_reg[7]                 ; Clock        ; Clock       ; 10.000       ; 2.706      ; 6.273      ;
+; 5.446 ; Reset                          ; tecla_storage[6]               ; Clock        ; Clock       ; 10.000       ; 2.708      ; 6.261      ;
+; 5.482 ; Reset                          ; bit_count[0]                   ; Clock        ; Clock       ; 10.000       ; 2.704      ; 6.221      ;
+; 5.495 ; Reset                          ; state.READY_PULSE~_Duplicate_1 ; Clock        ; Clock       ; 10.000       ; 2.708      ; 6.212      ;
+; 5.497 ; Reset                          ; bit_count[1]                   ; Clock        ; Clock       ; 10.000       ; 2.704      ; 6.206      ;
+; 5.512 ; Serial                         ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 10.000       ; 2.705      ; 6.192      ;
+; 5.589 ; Serial                         ; state.WAIT_KEY                 ; Clock        ; Clock       ; 10.000       ; 2.705      ; 6.115      ;
+; 5.615 ; Reset                          ; tecla_storage[2]               ; Clock        ; Clock       ; 10.000       ; 2.708      ; 6.092      ;
+; 5.629 ; Reset                          ; tecla_storage[1]               ; Clock        ; Clock       ; 10.000       ; 2.708      ; 6.078      ;
+; 5.638 ; Reset                          ; bit_count[2]                   ; Clock        ; Clock       ; 10.000       ; 2.704      ; 6.065      ;
+; 5.663 ; Reset                          ; bit_count[3]                   ; Clock        ; Clock       ; 10.000       ; 2.704      ; 6.040      ;
+; 5.764 ; Reset                          ; tecla_storage[5]               ; Clock        ; Clock       ; 10.000       ; 2.708      ; 5.943      ;
+; 5.765 ; Reset                          ; tecla_storage[3]               ; Clock        ; Clock       ; 10.000       ; 2.708      ; 5.942      ;
+; 5.799 ; Reset                          ; tecla_storage[0]               ; Clock        ; Clock       ; 10.000       ; 2.708      ; 5.908      ;
+; 5.799 ; Reset                          ; tecla_storage[4]               ; Clock        ; Clock       ; 10.000       ; 2.708      ; 5.908      ;
+; 5.848 ; Reset                          ; state.IDLE                     ; Clock        ; Clock       ; 10.000       ; 2.708      ; 5.859      ;
+; 5.999 ; Serial                         ; key_reg[0]                     ; Clock        ; Clock       ; 10.000       ; 2.707      ; 5.707      ;
+; 6.011 ; inv_key_reg[1]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.100     ; 3.776      ;
+; 6.124 ; inv_key_reg[0]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.100     ; 3.663      ;
+; 6.174 ; key_reg[1]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.101     ; 3.612      ;
+; 6.196 ; inv_key_reg[7]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.100     ; 3.591      ;
+; 6.212 ; Reset                          ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; 2.708      ; 5.495      ;
+; 6.330 ; key_reg[7]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.101     ; 3.456      ;
+; 6.373 ; inv_key_reg[2]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.100     ; 3.414      ;
+; 6.388 ; inv_key_reg[1]                 ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.541      ;
+; 6.388 ; inv_key_reg[1]                 ; tecla_storage[0]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.541      ;
+; 6.388 ; inv_key_reg[1]                 ; tecla_storage[1]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.541      ;
+; 6.388 ; inv_key_reg[1]                 ; tecla_storage[2]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.541      ;
+; 6.388 ; inv_key_reg[1]                 ; tecla_storage[3]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.541      ;
+; 6.388 ; inv_key_reg[1]                 ; tecla_storage[4]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.541      ;
+; 6.388 ; inv_key_reg[1]                 ; tecla_storage[5]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.541      ;
+; 6.388 ; inv_key_reg[1]                 ; tecla_storage[6]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.541      ;
+; 6.423 ; key_reg[5]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.101     ; 3.363      ;
+; 6.429 ; key_reg[4]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.101     ; 3.357      ;
+; 6.452 ; inv_key_reg[5]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.100     ; 3.335      ;
+; 6.458 ; inv_key_reg[6]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.100     ; 3.329      ;
+; 6.478 ; Serial                         ; state.IDLE                     ; Clock        ; Clock       ; 10.000       ; 2.708      ; 5.229      ;
+; 6.501 ; inv_key_reg[0]                 ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.428      ;
+; 6.501 ; inv_key_reg[0]                 ; tecla_storage[0]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.428      ;
+; 6.501 ; inv_key_reg[0]                 ; tecla_storage[1]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.428      ;
+; 6.501 ; inv_key_reg[0]                 ; tecla_storage[2]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.428      ;
+; 6.501 ; inv_key_reg[0]                 ; tecla_storage[3]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.428      ;
+; 6.501 ; inv_key_reg[0]                 ; tecla_storage[4]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.428      ;
+; 6.501 ; inv_key_reg[0]                 ; tecla_storage[5]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.428      ;
+; 6.501 ; inv_key_reg[0]                 ; tecla_storage[6]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.428      ;
+; 6.505 ; key_reg[6]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.101     ; 3.281      ;
+; 6.526 ; key_reg[0]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.101     ; 3.260      ;
+; 6.527 ; state.READY_PULSE~_Duplicate_1 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.102     ; 3.258      ;
+; 6.537 ; inv_key_reg[3]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.100     ; 3.250      ;
+; 6.538 ; key_reg[2]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.101     ; 3.248      ;
+; 6.551 ; key_reg[1]                     ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; -0.071     ; 3.377      ;
+; 6.551 ; key_reg[1]                     ; tecla_storage[0]               ; Clock        ; Clock       ; 10.000       ; -0.071     ; 3.377      ;
+; 6.551 ; key_reg[1]                     ; tecla_storage[1]               ; Clock        ; Clock       ; 10.000       ; -0.071     ; 3.377      ;
+; 6.551 ; key_reg[1]                     ; tecla_storage[2]               ; Clock        ; Clock       ; 10.000       ; -0.071     ; 3.377      ;
+; 6.551 ; key_reg[1]                     ; tecla_storage[3]               ; Clock        ; Clock       ; 10.000       ; -0.071     ; 3.377      ;
+; 6.551 ; key_reg[1]                     ; tecla_storage[4]               ; Clock        ; Clock       ; 10.000       ; -0.071     ; 3.377      ;
+; 6.551 ; key_reg[1]                     ; tecla_storage[5]               ; Clock        ; Clock       ; 10.000       ; -0.071     ; 3.377      ;
+; 6.551 ; key_reg[1]                     ; tecla_storage[6]               ; Clock        ; Clock       ; 10.000       ; -0.071     ; 3.377      ;
+; 6.563 ; inv_key_reg[4]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.100     ; 3.224      ;
+; 6.573 ; inv_key_reg[7]                 ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.356      ;
+; 6.573 ; inv_key_reg[7]                 ; tecla_storage[0]               ; Clock        ; Clock       ; 10.000       ; -0.070     ; 3.356      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'Clock'                                                                                                            ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.353 ; pulse_count[0]                 ; pulse_count[0]                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.597      ;
+; 0.353 ; state.WAIT_KEY                 ; state.WAIT_KEY                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.597      ;
+; 0.353 ; state.WAIT_CUSTOM              ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.597      ;
+; 0.353 ; pulse_count[1]                 ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.597      ;
+; 0.353 ; state.WAIT_INV_KEY             ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.597      ;
+; 0.353 ; state.WAIT_END                 ; state.WAIT_END                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.597      ;
+; 0.353 ; bit_count[2]                   ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.597      ;
+; 0.353 ; bit_count[1]                   ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.597      ;
+; 0.364 ; bit_count[0]                   ; bit_count[0]                   ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.608      ;
+; 0.397 ; key_reg[0]                     ; key_reg[1]                     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.640      ;
+; 0.403 ; key_reg[5]                     ; key_reg[6]                     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.646      ;
+; 0.403 ; key_reg[3]                     ; key_reg[4]                     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.646      ;
+; 0.403 ; key_reg[1]                     ; key_reg[2]                     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.646      ;
+; 0.404 ; key_reg[2]                     ; key_reg[3]                     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.647      ;
+; 0.405 ; bit_count[0]                   ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.649      ;
+; 0.409 ; bit_count[0]                   ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.653      ;
+; 0.417 ; inv_key_reg[5]                 ; inv_key_reg[6]                 ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.660      ;
+; 0.417 ; inv_key_reg[4]                 ; inv_key_reg[5]                 ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.660      ;
+; 0.417 ; inv_key_reg[0]                 ; inv_key_reg[1]                 ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.660      ;
+; 0.418 ; inv_key_reg[2]                 ; inv_key_reg[3]                 ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.661      ;
+; 0.422 ; state.WAIT_END                 ; state.VALIDATE                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.666      ;
+; 0.434 ; state.WAIT_KEY                 ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.678      ;
+; 0.515 ; key_reg[6]                     ; key_reg[7]                     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.758      ;
+; 0.526 ; inv_key_reg[3]                 ; inv_key_reg[4]                 ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.769      ;
+; 0.527 ; inv_key_reg[1]                 ; inv_key_reg[2]                 ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.770      ;
+; 0.584 ; state.WAIT_INV_KEY             ; state.WAIT_END                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.828      ;
+; 0.588 ; key_reg[4]                     ; key_reg[5]                     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.831      ;
+; 0.625 ; bit_count[1]                   ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.869      ;
+; 0.644 ; inv_key_reg[6]                 ; inv_key_reg[7]                 ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.887      ;
+; 0.654 ; pulse_count[0]                 ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.898      ;
+; 0.765 ; state.IDLE                     ; pulse_count[0]                 ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.005      ;
+; 0.816 ; state.READY_PULSE~_Duplicate_1 ; state.READY_PULSE~_Duplicate_1 ; Clock        ; Clock       ; 0.000        ; 0.072      ; 1.059      ;
+; 0.817 ; state.WAIT_END                 ; pulse_count[0]                 ; Clock        ; Clock       ; 0.000        ; 0.072      ; 1.060      ;
+; 0.931 ; bit_count[0]                   ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.175      ;
+; 1.024 ; bit_count[2]                   ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.268      ;
+; 1.033 ; key_reg[0]                     ; tecla_storage[0]               ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.277      ;
+; 1.060 ; state.READY_PULSE~_Duplicate_1 ; pulse_count[0]                 ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.300      ;
+; 1.070 ; state.VALIDATE                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.075      ; 1.316      ;
+; 1.072 ; key_reg[3]                     ; tecla_storage[3]               ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.316      ;
+; 1.073 ; key_reg[1]                     ; tecla_storage[1]               ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.317      ;
+; 1.073 ; key_reg[5]                     ; tecla_storage[5]               ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.317      ;
+; 1.089 ; state.VALIDATE                 ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.333      ;
+; 1.091 ; state.VALIDATE                 ; state.WAIT_END                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.335      ;
+; 1.094 ; state.READY_PULSE~_Duplicate_1 ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.334      ;
+; 1.099 ; bit_count[3]                   ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.343      ;
+; 1.124 ; state.WAIT_END                 ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.072      ; 1.367      ;
+; 1.128 ; bit_count[1]                   ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.372      ;
+; 1.148 ; pulse_count[1]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.076      ; 1.395      ;
+; 1.148 ; key_reg[3]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.392      ;
+; 1.192 ; key_reg[2]                     ; tecla_storage[2]               ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.436      ;
+; 1.219 ; state.IDLE                     ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 0.000        ; 0.070      ; 1.460      ;
+; 1.222 ; key_reg[4]                     ; tecla_storage[4]               ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.466      ;
+; 1.281 ; state.IDLE                     ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.521      ;
+; 1.328 ; key_reg[6]                     ; tecla_storage[6]               ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.572      ;
+; 1.331 ; state.IDLE                     ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.571      ;
+; 1.365 ; state.WAIT_CUSTOM              ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.072      ; 1.608      ;
+; 1.368 ; state.IDLE                     ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.608      ;
+; 1.372 ; state.VALIDATE                 ; state.READY_PULSE~_Duplicate_1 ; Clock        ; Clock       ; 0.000        ; 0.075      ; 1.618      ;
+; 1.379 ; key_reg[2]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.623      ;
+; 1.402 ; state.WAIT_CUSTOM              ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.072      ; 1.645      ;
+; 1.423 ; pulse_count[0]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.076      ; 1.670      ;
+; 1.465 ; inv_key_reg[4]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.710      ;
+; 1.469 ; inv_key_reg[3]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.714      ;
+; 1.471 ; state.IDLE                     ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.711      ;
+; 1.472 ; pulse_count[1]                 ; state.READY_PULSE~_Duplicate_1 ; Clock        ; Clock       ; 0.000        ; 0.076      ; 1.719      ;
+; 1.473 ; state.IDLE                     ; bit_count[0]                   ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.713      ;
+; 1.473 ; key_reg[0]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.717      ;
+; 1.485 ; state.VALIDATE                 ; bit_count[0]                   ; Clock        ; Clock       ; 0.000        ; 0.072      ; 1.728      ;
+; 1.485 ; state.VALIDATE                 ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.072      ; 1.728      ;
+; 1.485 ; state.VALIDATE                 ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.072      ; 1.728      ;
+; 1.485 ; state.VALIDATE                 ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.072      ; 1.728      ;
+; 1.487 ; state.WAIT_CUSTOM              ; state.WAIT_KEY                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.731      ;
+; 1.487 ; key_reg[6]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.731      ;
+; 1.505 ; state.WAIT_CUSTOM              ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.072      ; 1.748      ;
+; 1.507 ; state.WAIT_CUSTOM              ; bit_count[0]                   ; Clock        ; Clock       ; 0.000        ; 0.072      ; 1.750      ;
+; 1.511 ; key_reg[4]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.755      ;
+; 1.516 ; key_reg[5]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.760      ;
+; 1.533 ; state.WAIT_KEY                 ; state.WAIT_END                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.777      ;
+; 1.550 ; pulse_count[1]                 ; state.WAIT_KEY                 ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.795      ;
+; 1.564 ; inv_key_reg[2]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.809      ;
+; 1.570 ; state.WAIT_END                 ; state.WAIT_KEY                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.814      ;
+; 1.571 ; inv_key_reg[6]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.816      ;
+; 1.578 ; inv_key_reg[5]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.823      ;
+; 1.596 ; pulse_count[1]                 ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.841      ;
+; 1.599 ; state.WAIT_KEY                 ; key_reg[7]                     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.844      ;
+; 1.599 ; state.WAIT_KEY                 ; key_reg[6]                     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.844      ;
+; 1.599 ; state.WAIT_KEY                 ; key_reg[5]                     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.844      ;
+; 1.599 ; state.WAIT_KEY                 ; key_reg[4]                     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.844      ;
+; 1.599 ; state.WAIT_KEY                 ; key_reg[3]                     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.844      ;
+; 1.599 ; state.WAIT_KEY                 ; key_reg[2]                     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.844      ;
+; 1.599 ; state.WAIT_KEY                 ; key_reg[1]                     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.844      ;
+; 1.599 ; state.WAIT_KEY                 ; key_reg[0]                     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.844      ;
+; 1.607 ; state.WAIT_END                 ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.851      ;
+; 1.612 ; state.WAIT_INV_KEY             ; inv_key_reg[7]                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.856      ;
+; 1.612 ; state.WAIT_INV_KEY             ; inv_key_reg[6]                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.856      ;
+; 1.612 ; state.WAIT_INV_KEY             ; inv_key_reg[5]                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.856      ;
+; 1.612 ; state.WAIT_INV_KEY             ; inv_key_reg[4]                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.856      ;
+; 1.612 ; state.WAIT_INV_KEY             ; inv_key_reg[3]                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.856      ;
+; 1.612 ; state.WAIT_INV_KEY             ; inv_key_reg[2]                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.856      ;
+; 1.612 ; state.WAIT_INV_KEY             ; inv_key_reg[1]                 ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.856      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; Clock ; 4.241 ; 0.000              ;
++-------+-------+--------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; Clock ; 0.181 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; Clock ; 4.436 ; 0.000                            ;
++-------+-------+----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'Clock'                                                                                                           ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 4.241 ; state.READY_PULSE~_Duplicate_1 ; Tecla[4]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 3.080      ;
+; 4.320 ; tecla_storage[4]               ; Tecla[4]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 3.001      ;
+; 4.876 ; state.READY_PULSE~_Duplicate_1 ; Tecla[5]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.445      ;
+; 4.890 ; state.READY_PULSE~_Duplicate_1 ; Tecla[1]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.431      ;
+; 4.892 ; state.READY_PULSE~_Duplicate_1 ; Tecla[0]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.429      ;
+; 4.898 ; state.READY_PULSE~_Duplicate_1 ; Tecla[2]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.423      ;
+; 4.920 ; state.READY_PULSE~_Duplicate_1 ; Tecla[7]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.401      ;
+; 4.936 ; state.READY_PULSE~_Duplicate_1 ; Tecla[6]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.385      ;
+; 4.969 ; tecla_storage[1]               ; Tecla[1]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.352      ;
+; 4.971 ; tecla_storage[0]               ; Tecla[0]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.350      ;
+; 4.994 ; state.READY_PULSE~_Duplicate_1 ; Tecla[3]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.327      ;
+; 5.002 ; tecla_storage[7]               ; Tecla[7]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.319      ;
+; 5.018 ; tecla_storage[6]               ; Tecla[6]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.303      ;
+; 5.077 ; tecla_storage[3]               ; Tecla[3]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.244      ;
+; 5.163 ; tecla_storage[5]               ; Tecla[5]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.158      ;
+; 5.185 ; tecla_storage[2]               ; Tecla[2]                       ; Clock        ; Clock       ; 10.000       ; -1.659     ; 2.136      ;
+; 5.667 ; state.READY_PULSE              ; Ready                          ; Clock        ; Clock       ; 10.000       ; -1.627     ; 1.686      ;
+; 6.183 ; Reset                          ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; 1.577      ; 4.333      ;
+; 6.254 ; Serial                         ; state.WAIT_END                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.329      ;
+; 6.256 ; Serial                         ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.327      ;
+; 6.335 ; Reset                          ; state.WAIT_END                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.248      ;
+; 6.337 ; Reset                          ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.246      ;
+; 6.535 ; Reset                          ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.048      ;
+; 6.541 ; Reset                          ; key_reg[0]                     ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.042      ;
+; 6.541 ; Reset                          ; key_reg[3]                     ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.042      ;
+; 6.541 ; Reset                          ; key_reg[2]                     ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.042      ;
+; 6.541 ; Reset                          ; key_reg[1]                     ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.042      ;
+; 6.541 ; Reset                          ; key_reg[5]                     ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.042      ;
+; 6.541 ; Reset                          ; key_reg[4]                     ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.042      ;
+; 6.541 ; Reset                          ; key_reg[6]                     ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.042      ;
+; 6.541 ; Reset                          ; key_reg[7]                     ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.042      ;
+; 6.542 ; Reset                          ; inv_key_reg[0]                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.041      ;
+; 6.542 ; Reset                          ; inv_key_reg[3]                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.041      ;
+; 6.542 ; Reset                          ; inv_key_reg[2]                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.041      ;
+; 6.542 ; Reset                          ; inv_key_reg[1]                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.041      ;
+; 6.542 ; Reset                          ; inv_key_reg[4]                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.041      ;
+; 6.542 ; Reset                          ; inv_key_reg[5]                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.041      ;
+; 6.542 ; Reset                          ; inv_key_reg[6]                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.041      ;
+; 6.542 ; Reset                          ; inv_key_reg[7]                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.041      ;
+; 6.578 ; Reset                          ; state.WAIT_KEY                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 4.005      ;
+; 6.610 ; Reset                          ; bit_count[0]                   ; Clock        ; Clock       ; 10.000       ; 1.595      ; 3.972      ;
+; 6.616 ; Reset                          ; tecla_storage[6]               ; Clock        ; Clock       ; 10.000       ; 1.597      ; 3.968      ;
+; 6.620 ; Reset                          ; bit_count[1]                   ; Clock        ; Clock       ; 10.000       ; 1.595      ; 3.962      ;
+; 6.621 ; Serial                         ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 10.000       ; 1.596      ; 3.962      ;
+; 6.664 ; Serial                         ; state.WAIT_KEY                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 3.919      ;
+; 6.674 ; Reset                          ; state.READY_PULSE~_Duplicate_1 ; Clock        ; Clock       ; 10.000       ; 1.597      ; 3.910      ;
+; 6.703 ; Reset                          ; tecla_storage[1]               ; Clock        ; Clock       ; 10.000       ; 1.597      ; 3.881      ;
+; 6.708 ; Reset                          ; bit_count[2]                   ; Clock        ; Clock       ; 10.000       ; 1.595      ; 3.874      ;
+; 6.727 ; Reset                          ; tecla_storage[2]               ; Clock        ; Clock       ; 10.000       ; 1.597      ; 3.857      ;
+; 6.730 ; Reset                          ; bit_count[3]                   ; Clock        ; Clock       ; 10.000       ; 1.595      ; 3.852      ;
+; 6.794 ; Reset                          ; tecla_storage[5]               ; Clock        ; Clock       ; 10.000       ; 1.597      ; 3.790      ;
+; 6.795 ; Reset                          ; tecla_storage[3]               ; Clock        ; Clock       ; 10.000       ; 1.597      ; 3.789      ;
+; 6.805 ; Reset                          ; tecla_storage[4]               ; Clock        ; Clock       ; 10.000       ; 1.597      ; 3.779      ;
+; 6.807 ; Reset                          ; tecla_storage[0]               ; Clock        ; Clock       ; 10.000       ; 1.597      ; 3.777      ;
+; 6.843 ; Reset                          ; state.IDLE                     ; Clock        ; Clock       ; 10.000       ; 1.597      ; 3.741      ;
+; 6.883 ; Serial                         ; key_reg[0]                     ; Clock        ; Clock       ; 10.000       ; 1.596      ; 3.700      ;
+; 7.151 ; Reset                          ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; 1.597      ; 3.433      ;
+; 7.185 ; Serial                         ; state.IDLE                     ; Clock        ; Clock       ; 10.000       ; 1.597      ; 3.399      ;
+; 7.202 ; Serial                         ; inv_key_reg[0]                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 3.381      ;
+; 7.213 ; Reset                          ; state.VALIDATE                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 3.370      ;
+; 7.233 ; Serial                         ; state.VALIDATE                 ; Clock        ; Clock       ; 10.000       ; 1.596      ; 3.350      ;
+; 7.269 ; Reset                          ; pulse_count[0]                 ; Clock        ; Clock       ; 10.000       ; 1.595      ; 3.313      ;
+; 7.269 ; Reset                          ; pulse_count[1]                 ; Clock        ; Clock       ; 10.000       ; 1.595      ; 3.313      ;
+; 7.839 ; inv_key_reg[1]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 2.039      ;
+; 7.889 ; inv_key_reg[0]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.989      ;
+; 7.932 ; inv_key_reg[7]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.946      ;
+; 7.932 ; key_reg[1]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.946      ;
+; 8.010 ; key_reg[7]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.868      ;
+; 8.050 ; key_reg[4]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.828      ;
+; 8.053 ; inv_key_reg[2]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.825      ;
+; 8.055 ; key_reg[5]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.823      ;
+; 8.061 ; inv_key_reg[6]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.817      ;
+; 8.061 ; inv_key_reg[5]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.817      ;
+; 8.085 ; key_reg[6]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.793      ;
+; 8.096 ; key_reg[0]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.782      ;
+; 8.112 ; inv_key_reg[1]                 ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.834      ;
+; 8.112 ; inv_key_reg[1]                 ; tecla_storage[0]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.834      ;
+; 8.112 ; inv_key_reg[1]                 ; tecla_storage[1]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.834      ;
+; 8.112 ; inv_key_reg[1]                 ; tecla_storage[2]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.834      ;
+; 8.112 ; inv_key_reg[1]                 ; tecla_storage[3]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.834      ;
+; 8.112 ; inv_key_reg[1]                 ; tecla_storage[4]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.834      ;
+; 8.112 ; inv_key_reg[1]                 ; tecla_storage[5]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.834      ;
+; 8.112 ; inv_key_reg[1]                 ; tecla_storage[6]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.834      ;
+; 8.118 ; inv_key_reg[3]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.760      ;
+; 8.135 ; inv_key_reg[4]                 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.743      ;
+; 8.148 ; key_reg[2]                     ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.061     ; 1.730      ;
+; 8.158 ; state.READY_PULSE~_Duplicate_1 ; state.WAIT_END                 ; Clock        ; Clock       ; 10.000       ; -0.043     ; 1.786      ;
+; 8.160 ; state.READY_PULSE~_Duplicate_1 ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 10.000       ; -0.043     ; 1.784      ;
+; 8.162 ; inv_key_reg[0]                 ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.784      ;
+; 8.162 ; inv_key_reg[0]                 ; tecla_storage[0]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.784      ;
+; 8.162 ; inv_key_reg[0]                 ; tecla_storage[1]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.784      ;
+; 8.162 ; inv_key_reg[0]                 ; tecla_storage[2]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.784      ;
+; 8.162 ; inv_key_reg[0]                 ; tecla_storage[3]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.784      ;
+; 8.162 ; inv_key_reg[0]                 ; tecla_storage[4]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.784      ;
+; 8.162 ; inv_key_reg[0]                 ; tecla_storage[5]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.784      ;
+; 8.162 ; inv_key_reg[0]                 ; tecla_storage[6]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.784      ;
+; 8.188 ; state.READY_PULSE~_Duplicate_1 ; state.READY_PULSE              ; Clock        ; Clock       ; 10.000       ; -0.062     ; 1.689      ;
+; 8.205 ; inv_key_reg[7]                 ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.741      ;
+; 8.205 ; key_reg[1]                     ; tecla_storage[7]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.741      ;
+; 8.205 ; inv_key_reg[7]                 ; tecla_storage[0]               ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.741      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'Clock'                                                                                                            ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.181 ; pulse_count[0]                 ; pulse_count[0]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; pulse_count[1]                 ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; bit_count[2]                   ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; bit_count[1]                   ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.307      ;
+; 0.182 ; state.WAIT_KEY                 ; state.WAIT_KEY                 ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; state.WAIT_CUSTOM              ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; state.WAIT_INV_KEY             ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; state.WAIT_END                 ; state.WAIT_END                 ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.307      ;
+; 0.188 ; bit_count[0]                   ; bit_count[0]                   ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.314      ;
+; 0.189 ; key_reg[0]                     ; key_reg[1]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.315      ;
+; 0.192 ; key_reg[1]                     ; key_reg[2]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.318      ;
+; 0.193 ; key_reg[5]                     ; key_reg[6]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.319      ;
+; 0.193 ; key_reg[3]                     ; key_reg[4]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.319      ;
+; 0.193 ; key_reg[2]                     ; key_reg[3]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.319      ;
+; 0.200 ; inv_key_reg[5]                 ; inv_key_reg[6]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.326      ;
+; 0.200 ; inv_key_reg[0]                 ; inv_key_reg[1]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.326      ;
+; 0.201 ; inv_key_reg[4]                 ; inv_key_reg[5]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.327      ;
+; 0.201 ; inv_key_reg[2]                 ; inv_key_reg[3]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.327      ;
+; 0.204 ; bit_count[0]                   ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.330      ;
+; 0.205 ; state.WAIT_END                 ; state.VALIDATE                 ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.330      ;
+; 0.207 ; bit_count[0]                   ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.333      ;
+; 0.212 ; state.WAIT_KEY                 ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.337      ;
+; 0.253 ; key_reg[6]                     ; key_reg[7]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.379      ;
+; 0.257 ; inv_key_reg[3]                 ; inv_key_reg[4]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.383      ;
+; 0.258 ; inv_key_reg[1]                 ; inv_key_reg[2]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.384      ;
+; 0.279 ; state.WAIT_INV_KEY             ; state.WAIT_END                 ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.404      ;
+; 0.294 ; key_reg[4]                     ; key_reg[5]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.420      ;
+; 0.312 ; bit_count[1]                   ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.438      ;
+; 0.322 ; inv_key_reg[6]                 ; inv_key_reg[7]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.448      ;
+; 0.333 ; pulse_count[0]                 ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.459      ;
+; 0.379 ; state.IDLE                     ; pulse_count[0]                 ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.503      ;
+; 0.392 ; state.WAIT_END                 ; pulse_count[0]                 ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.517      ;
+; 0.398 ; state.READY_PULSE~_Duplicate_1 ; state.READY_PULSE~_Duplicate_1 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.524      ;
+; 0.459 ; bit_count[0]                   ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.585      ;
+; 0.483 ; key_reg[0]                     ; tecla_storage[0]               ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.610      ;
+; 0.498 ; key_reg[1]                     ; tecla_storage[1]               ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.625      ;
+; 0.499 ; key_reg[3]                     ; tecla_storage[3]               ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.626      ;
+; 0.499 ; key_reg[5]                     ; tecla_storage[5]               ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.626      ;
+; 0.509 ; bit_count[2]                   ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.635      ;
+; 0.526 ; state.VALIDATE                 ; state.WAIT_INV_KEY             ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.651      ;
+; 0.528 ; state.VALIDATE                 ; state.WAIT_END                 ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.653      ;
+; 0.530 ; state.READY_PULSE~_Duplicate_1 ; pulse_count[0]                 ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.654      ;
+; 0.534 ; state.VALIDATE                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.661      ;
+; 0.544 ; state.WAIT_END                 ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.669      ;
+; 0.548 ; bit_count[3]                   ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.674      ;
+; 0.556 ; state.READY_PULSE~_Duplicate_1 ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.680      ;
+; 0.562 ; bit_count[1]                   ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.688      ;
+; 0.564 ; key_reg[2]                     ; tecla_storage[2]               ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.691      ;
+; 0.578 ; key_reg[3]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.705      ;
+; 0.588 ; key_reg[4]                     ; tecla_storage[4]               ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.715      ;
+; 0.624 ; key_reg[6]                     ; tecla_storage[6]               ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.751      ;
+; 0.626 ; pulse_count[1]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.044      ; 0.754      ;
+; 0.634 ; state.IDLE                     ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.758      ;
+; 0.640 ; state.IDLE                     ; pulse_count[1]                 ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.764      ;
+; 0.677 ; state.IDLE                     ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.801      ;
+; 0.686 ; state.VALIDATE                 ; state.READY_PULSE~_Duplicate_1 ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.813      ;
+; 0.686 ; key_reg[2]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.813      ;
+; 0.695 ; state.IDLE                     ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.819      ;
+; 0.695 ; pulse_count[0]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.044      ; 0.823      ;
+; 0.695 ; state.WAIT_CUSTOM              ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.820      ;
+; 0.711 ; inv_key_reg[4]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.838      ;
+; 0.713 ; state.WAIT_CUSTOM              ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.838      ;
+; 0.724 ; inv_key_reg[3]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.851      ;
+; 0.727 ; state.WAIT_CUSTOM              ; state.WAIT_KEY                 ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.852      ;
+; 0.737 ; key_reg[0]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.864      ;
+; 0.739 ; key_reg[6]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.866      ;
+; 0.742 ; key_reg[5]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.869      ;
+; 0.753 ; state.VALIDATE                 ; bit_count[0]                   ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.878      ;
+; 0.753 ; state.VALIDATE                 ; bit_count[2]                   ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.878      ;
+; 0.753 ; state.VALIDATE                 ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.878      ;
+; 0.753 ; state.VALIDATE                 ; bit_count[3]                   ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.878      ;
+; 0.759 ; state.WAIT_END                 ; state.WAIT_KEY                 ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.884      ;
+; 0.763 ; inv_key_reg[6]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.890      ;
+; 0.764 ; pulse_count[1]                 ; state.WAIT_KEY                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.890      ;
+; 0.766 ; key_reg[4]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.893      ;
+; 0.768 ; state.IDLE                     ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.892      ;
+; 0.770 ; state.IDLE                     ; bit_count[0]                   ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.894      ;
+; 0.771 ; inv_key_reg[5]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.898      ;
+; 0.776 ; inv_key_reg[2]                 ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.903      ;
+; 0.784 ; state.WAIT_END                 ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.909      ;
+; 0.786 ; state.WAIT_CUSTOM              ; bit_count[1]                   ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.911      ;
+; 0.788 ; pulse_count[1]                 ; state.READY_PULSE~_Duplicate_1 ; Clock        ; Clock       ; 0.000        ; 0.044      ; 0.916      ;
+; 0.788 ; state.WAIT_CUSTOM              ; bit_count[0]                   ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.913      ;
+; 0.789 ; pulse_count[1]                 ; state.WAIT_CUSTOM              ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.915      ;
+; 0.793 ; key_reg[7]                     ; state.IDLE                     ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.920      ;
+; 0.796 ; state.WAIT_KEY                 ; state.WAIT_END                 ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.921      ;
+; 0.799 ; state.WAIT_KEY                 ; key_reg[7]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.925      ;
+; 0.799 ; state.WAIT_KEY                 ; key_reg[6]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.925      ;
+; 0.799 ; state.WAIT_KEY                 ; key_reg[5]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.925      ;
+; 0.799 ; state.WAIT_KEY                 ; key_reg[4]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.925      ;
+; 0.799 ; state.WAIT_KEY                 ; key_reg[3]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.925      ;
+; 0.799 ; state.WAIT_KEY                 ; key_reg[2]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.925      ;
+; 0.799 ; state.WAIT_KEY                 ; key_reg[1]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.925      ;
+; 0.799 ; state.WAIT_KEY                 ; key_reg[0]                     ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.925      ;
+; 0.809 ; state.WAIT_INV_KEY             ; inv_key_reg[7]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.935      ;
+; 0.809 ; state.WAIT_INV_KEY             ; inv_key_reg[6]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.935      ;
+; 0.809 ; state.WAIT_INV_KEY             ; inv_key_reg[5]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.935      ;
+; 0.809 ; state.WAIT_INV_KEY             ; inv_key_reg[4]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.935      ;
+; 0.809 ; state.WAIT_INV_KEY             ; inv_key_reg[3]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.935      ;
+; 0.809 ; state.WAIT_INV_KEY             ; inv_key_reg[2]                 ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.935      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 0.524 ; 0.181 ; N/A      ; N/A     ; 4.436               ;
+;  Clock           ; 0.524 ; 0.181 ; N/A      ; N/A     ; 4.436               ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  Clock           ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+-------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Tecla[0]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Tecla[1]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Tecla[2]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Tecla[3]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Tecla[4]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Tecla[5]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Tecla[6]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Tecla[7]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Ready         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; Reset                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Clock                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Serial                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Tecla[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; Tecla[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; Tecla[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; Tecla[3]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.38 V              ; -0.0144 V           ; 0.227 V                              ; 0.024 V                              ; 3.14e-10 s                  ; 3.39e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.38 V             ; -0.0144 V          ; 0.227 V                             ; 0.024 V                             ; 3.14e-10 s                 ; 3.39e-10 s                 ; Yes                       ; Yes                       ;
+; Tecla[4]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.33 V              ; -0.00496 V          ; 0.223 V                              ; 0.086 V                              ; 2.9e-09 s                   ; 2.73e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.33 V             ; -0.00496 V         ; 0.223 V                             ; 0.086 V                             ; 2.9e-09 s                  ; 2.73e-09 s                 ; Yes                       ; Yes                       ;
+; Tecla[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; Tecla[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; Tecla[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; Ready         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Tecla[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; Tecla[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; Tecla[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; Tecla[3]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.36 V              ; -0.00552 V          ; 0.11 V                               ; 0.007 V                              ; 4.54e-10 s                  ; 4.35e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.36 V             ; -0.00552 V         ; 0.11 V                              ; 0.007 V                             ; 4.54e-10 s                 ; 4.35e-10 s                 ; Yes                       ; Yes                       ;
+; Tecla[4]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.33 V              ; -0.00269 V          ; 0.13 V                               ; 0.055 V                              ; 3.54e-09 s                  ; 3.29e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.33 V             ; -0.00269 V         ; 0.13 V                              ; 0.055 V                             ; 3.54e-09 s                 ; 3.29e-09 s                 ; Yes                       ; Yes                       ;
+; Tecla[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; Tecla[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; Tecla[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; Ready         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Tecla[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; Tecla[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; Tecla[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; Tecla[3]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; Tecla[4]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.64 V              ; -0.0117 V           ; 0.202 V                              ; 0.176 V                              ; 2.38e-09 s                  ; 2.22e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.64 V             ; -0.0117 V          ; 0.202 V                             ; 0.176 V                             ; 2.38e-09 s                 ; 2.22e-09 s                 ; No                        ; Yes                       ;
+; Tecla[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; Tecla[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; Tecla[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; Ready         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Clock      ; Clock    ; 509      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Clock      ; Clock    ; 509      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; Clock  ; Clock ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Tue Dec 30 16:30:15 2025
+Info: Command: quartus_sta q1_infravermelho -c q1_infravermelho
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'q1_infravermelho.out.sdc'
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332146): Worst-case setup slack is 0.524
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.524               0.000 Clock 
+Info (332146): Worst-case hold slack is 0.402
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.402               0.000 Clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.734
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.734               0.000 Clock 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332146): Worst-case setup slack is 1.451
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.451               0.000 Clock 
+Info (332146): Worst-case hold slack is 0.353
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.353               0.000 Clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.756
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.756               0.000 Clock 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332146): Worst-case setup slack is 4.241
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.241               0.000 Clock 
+Info (332146): Worst-case hold slack is 0.181
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.181               0.000 Clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.436
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.436               0.000 Clock 
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4961 megabytes
+    Info: Processing ended: Tue Dec 30 16:30:17 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,0 +1,1211 @@
+Timing Analyzer report for q3_mpeg
+Tue Dec 30 17:35:34 2025
+Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1200mV 85C Model Setup Summary
+  9. Slow 1200mV 85C Model Hold Summary
+ 10. Slow 1200mV 85C Model Recovery Summary
+ 11. Slow 1200mV 85C Model Removal Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1200mV 85C Model Setup: 'Clock'
+ 14. Slow 1200mV 85C Model Hold: 'Clock'
+ 15. Slow 1200mV 85C Model Metastability Summary
+ 16. Slow 1200mV 0C Model Fmax Summary
+ 17. Slow 1200mV 0C Model Setup Summary
+ 18. Slow 1200mV 0C Model Hold Summary
+ 19. Slow 1200mV 0C Model Recovery Summary
+ 20. Slow 1200mV 0C Model Removal Summary
+ 21. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 22. Slow 1200mV 0C Model Setup: 'Clock'
+ 23. Slow 1200mV 0C Model Hold: 'Clock'
+ 24. Slow 1200mV 0C Model Metastability Summary
+ 25. Fast 1200mV 0C Model Setup Summary
+ 26. Fast 1200mV 0C Model Hold Summary
+ 27. Fast 1200mV 0C Model Recovery Summary
+ 28. Fast 1200mV 0C Model Removal Summary
+ 29. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 30. Fast 1200mV 0C Model Setup: 'Clock'
+ 31. Fast 1200mV 0C Model Hold: 'Clock'
+ 32. Fast 1200mV 0C Model Metastability Summary
+ 33. Multicorner Timing Analysis Summary
+ 34. Board Trace Model Assignments
+ 35. Input Transition Times
+ 36. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 37. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 38. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++---------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                         ;
++-----------------------+---------------------------------------------------------+
+; Quartus Prime Version ; Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                  ;
+; Revision Name         ; q3_mpeg                                                 ;
+; Device Family         ; Cyclone IV E                                            ;
+; Device Name           ; EP4CE115F29C7                                           ;
+; Timing Models         ; Final                                                   ;
+; Delay Model           ; Combined                                                ;
+; Rise/Fall Delays      ; Enabled                                                 ;
++-----------------------+---------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.05        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   1.1%      ;
+;     Processors 3-12        ;   0.4%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------+
+; SDC File List                                       ;
++-----------------+--------+--------------------------+
+; SDC File Path   ; Status ; Read at                  ;
++-----------------+--------+--------------------------+
+; q3_mpeg.out.sdc ; OK     ; Tue Dec 30 17:35:34 2025 ;
++-----------------+--------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                           ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock      ; Base ; 10.000 ; 100.0 MHz ; 0.000 ; 5.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Clock } ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 118.25 MHz ; 118.25 MHz      ; Clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; Clock ; 1.543 ; 0.000               ;
++-------+-------+---------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; Clock ; 0.404 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+-------+-----------------------------------+
+; Clock ; Slack ; End Point TNS                     ;
++-------+-------+-----------------------------------+
+; Clock ; 4.733 ; 0.000                             ;
++-------+-------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'Clock'                                                                                                                   ;
++-------+------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.543 ; var_y[1]~reg0                      ; var_y[1]                            ; Clock        ; Clock       ; 10.000       ; -3.038     ; 4.399      ;
+; 2.891 ; var_v[0]~reg0_Duplicate_1          ; Address[0]                          ; Clock        ; Clock       ; 10.000       ; -3.041     ; 3.048      ;
+; 2.898 ; current_state.S_DONE               ; Ready                               ; Clock        ; Clock       ; 10.000       ; -3.034     ; 3.048      ;
+; 2.901 ; var_v[0]~reg0                      ; var_v[0]                            ; Clock        ; Clock       ; 10.000       ; -3.041     ; 3.038      ;
+; 2.902 ; var_u[1]~reg0_Duplicate_1          ; Address[4]                          ; Clock        ; Clock       ; 10.000       ; -3.040     ; 3.038      ;
+; 2.902 ; var_u[1]~reg0                      ; var_u[1]                            ; Clock        ; Clock       ; 10.000       ; -3.040     ; 3.038      ;
+; 2.905 ; var_u[2]~reg0_Duplicate_1          ; Address[5]                          ; Clock        ; Clock       ; 10.000       ; -3.037     ; 3.038      ;
+; 2.908 ; current_state.S_ACCUM              ; Active_MAC                          ; Clock        ; Clock       ; 10.000       ; -3.034     ; 3.038      ;
+; 2.915 ; var_u[2]~reg0                      ; var_u[2]                            ; Clock        ; Clock       ; 10.000       ; -3.037     ; 3.028      ;
+; 2.917 ; var_u[0]~reg0_Duplicate_1          ; Address[3]                          ; Clock        ; Clock       ; 10.000       ; -3.035     ; 3.028      ;
+; 2.917 ; var_u[0]~reg0                      ; var_u[0]                            ; Clock        ; Clock       ; 10.000       ; -3.035     ; 3.028      ;
+; 2.944 ; var_y[0]~reg0                      ; var_y[0]                            ; Clock        ; Clock       ; 10.000       ; -3.038     ; 2.998      ;
+; 2.945 ; var_x[0]~reg0                      ; var_x[0]                            ; Clock        ; Clock       ; 10.000       ; -3.037     ; 2.998      ;
+; 2.958 ; var_v[1]~reg0_Duplicate_1          ; Address[1]                          ; Clock        ; Clock       ; 10.000       ; -3.044     ; 2.978      ;
+; 2.958 ; var_v[1]~reg0                      ; var_v[1]                            ; Clock        ; Clock       ; 10.000       ; -3.044     ; 2.978      ;
+; 2.965 ; var_y[2]~reg0                      ; var_y[2]                            ; Clock        ; Clock       ; 10.000       ; -3.037     ; 2.978      ;
+; 2.965 ; var_x[2]~reg0                      ; var_x[2]                            ; Clock        ; Clock       ; 10.000       ; -3.037     ; 2.978      ;
+; 2.965 ; var_x[1]~reg0                      ; var_x[1]                            ; Clock        ; Clock       ; 10.000       ; -3.037     ; 2.978      ;
+; 2.968 ; current_state.S_ACT_RE             ; Read_Enable                         ; Clock        ; Clock       ; 10.000       ; -3.034     ; 2.978      ;
+; 2.982 ; var_v[2]~reg0_Duplicate_1          ; Address[2]                          ; Clock        ; Clock       ; 10.000       ; -3.040     ; 2.958      ;
+; 2.982 ; var_v[2]~reg0                      ; var_v[2]                            ; Clock        ; Clock       ; 10.000       ; -3.040     ; 2.958      ;
+; 4.401 ; Reset                              ; var_u[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.944      ; 7.426      ;
+; 4.401 ; Reset                              ; var_u[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.944      ; 7.426      ;
+; 4.633 ; Reset                              ; current_state.S_ACT_RE              ; Clock        ; Clock       ; 10.000       ; 2.942      ; 7.192      ;
+; 4.650 ; Reset                              ; var_y[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.944      ; 7.177      ;
+; 4.758 ; Reset                              ; var_u[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.943      ; 7.068      ;
+; 4.758 ; Reset                              ; var_u[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.943      ; 7.068      ;
+; 4.761 ; Reset                              ; current_state.S_ACCUM               ; Clock        ; Clock       ; 10.000       ; 2.942      ; 7.064      ;
+; 4.791 ; Reset                              ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; 2.942      ; 7.034      ;
+; 4.935 ; Reset                              ; var_y[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.946      ; 6.894      ;
+; 4.971 ; Reset                              ; var_v[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.952      ; 6.864      ;
+; 4.971 ; Reset                              ; var_v[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.952      ; 6.864      ;
+; 5.000 ; Reset                              ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.944      ; 6.827      ;
+; 5.012 ; Reset                              ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.944      ; 6.815      ;
+; 5.016 ; Reset                              ; var_v[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.948      ; 6.815      ;
+; 5.016 ; Reset                              ; var_v[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.948      ; 6.815      ;
+; 5.077 ; Reset                              ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.944      ; 6.865      ;
+; 5.097 ; Reset                              ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.946      ; 6.847      ;
+; 5.097 ; Reset                              ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.946      ; 6.847      ;
+; 5.103 ; Reset                              ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.944      ; 6.724      ;
+; 5.116 ; var_v[1]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.087     ; 4.680      ;
+; 5.178 ; Reset                              ; var_u[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.947      ; 6.652      ;
+; 5.178 ; Reset                              ; var_u[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.947      ; 6.652      ;
+; 5.205 ; Reset                              ; var_v[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.947      ; 6.625      ;
+; 5.205 ; Reset                              ; var_v[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.947      ; 6.625      ;
+; 5.226 ; var_v[0]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.087     ; 4.570      ;
+; 5.245 ; Reset                              ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.946      ; 6.699      ;
+; 5.289 ; Reset                              ; var_y[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.950      ; 6.659      ;
+; 5.324 ; var_u[2]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.085     ; 4.474      ;
+; 5.342 ; Reset                              ; current_state.S_ACCUM~_Duplicate_1  ; Clock        ; Clock       ; 10.000       ; 2.944      ; 6.600      ;
+; 5.381 ; var_v[2]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.087     ; 4.415      ;
+; 5.383 ; Reset                              ; var_y[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.946      ; 6.446      ;
+; 5.388 ; Reset                              ; var_u[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 2.948      ; 6.558      ;
+; 5.388 ; Reset                              ; var_u[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 2.948      ; 6.558      ;
+; 5.388 ; Reset                              ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 2.948      ; 6.558      ;
+; 5.471 ; Reset                              ; var_y[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.948      ; 6.475      ;
+; 5.559 ; Reset                              ; var_v[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 2.950      ; 6.389      ;
+; 5.563 ; Reset                              ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 2.950      ; 6.385      ;
+; 5.563 ; Reset                              ; var_v[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 2.950      ; 6.385      ;
+; 5.613 ; var_y[1]~reg0_Duplicate_1          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.087     ; 4.183      ;
+; 5.629 ; var_y[0]~reg0_Duplicate_1          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.085     ; 4.169      ;
+; 5.711 ; Reset                              ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 10.000       ; 2.944      ; 6.231      ;
+; 5.801 ; var_v[1]~reg0_Duplicate_2          ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.085     ; 4.112      ;
+; 5.821 ; var_v[1]~reg0_Duplicate_2          ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.083     ; 4.094      ;
+; 5.821 ; var_v[1]~reg0_Duplicate_2          ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.083     ; 4.094      ;
+; 5.827 ; var_v[1]~reg0_Duplicate_2          ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.971      ;
+; 5.827 ; var_v[1]~reg0_Duplicate_2          ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.971      ;
+; 5.827 ; var_v[1]~reg0_Duplicate_2          ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.971      ;
+; 5.888 ; var_u[0]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.910      ;
+; 5.911 ; var_v[0]~reg0_Duplicate_2          ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.085     ; 4.002      ;
+; 5.931 ; var_v[0]~reg0_Duplicate_2          ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.083     ; 3.984      ;
+; 5.931 ; var_v[0]~reg0_Duplicate_2          ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.083     ; 3.984      ;
+; 5.937 ; var_v[0]~reg0_Duplicate_2          ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.861      ;
+; 5.937 ; var_v[0]~reg0_Duplicate_2          ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.861      ;
+; 5.937 ; var_v[0]~reg0_Duplicate_2          ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.861      ;
+; 6.009 ; var_u[2]~reg0_Duplicate_2          ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.083     ; 3.906      ;
+; 6.029 ; var_u[2]~reg0_Duplicate_2          ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.081     ; 3.888      ;
+; 6.029 ; var_u[2]~reg0_Duplicate_2          ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.081     ; 3.888      ;
+; 6.035 ; var_u[2]~reg0_Duplicate_2          ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.083     ; 3.765      ;
+; 6.035 ; var_u[2]~reg0_Duplicate_2          ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.083     ; 3.765      ;
+; 6.035 ; var_u[2]~reg0_Duplicate_2          ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.083     ; 3.765      ;
+; 6.048 ; Reset                              ; current_state.S_IDLE                ; Clock        ; Clock       ; 10.000       ; 2.944      ; 5.894      ;
+; 6.048 ; Reset                              ; current_state.S_WAIT_DATA           ; Clock        ; Clock       ; 10.000       ; 2.944      ; 5.894      ;
+; 6.048 ; Reset                              ; current_state.S_ACT_RE~_Duplicate_1 ; Clock        ; Clock       ; 10.000       ; 2.944      ; 5.894      ;
+; 6.048 ; Reset                              ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 10.000       ; 2.944      ; 5.894      ;
+; 6.066 ; var_v[2]~reg0_Duplicate_2          ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.847      ;
+; 6.073 ; var_u[1]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.725      ;
+; 6.080 ; var_v[1]~reg0_Duplicate_2          ; var_y[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.718      ;
+; 6.080 ; var_v[2]~reg0_Duplicate_2          ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.718      ;
+; 6.080 ; var_v[2]~reg0_Duplicate_2          ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.718      ;
+; 6.080 ; var_v[2]~reg0_Duplicate_2          ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.718      ;
+; 6.086 ; var_v[2]~reg0_Duplicate_2          ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.083     ; 3.829      ;
+; 6.086 ; var_v[2]~reg0_Duplicate_2          ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.083     ; 3.829      ;
+; 6.190 ; var_v[0]~reg0_Duplicate_2          ; var_y[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.608      ;
+; 6.194 ; current_state.S_ACCUM~_Duplicate_1 ; var_u[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.080     ; 3.609      ;
+; 6.194 ; current_state.S_ACCUM~_Duplicate_1 ; var_u[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.080     ; 3.609      ;
+; 6.215 ; current_state.S_ACCUM~_Duplicate_1 ; var_u[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.589      ;
+; 6.215 ; current_state.S_ACCUM~_Duplicate_1 ; var_u[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.589      ;
+; 6.288 ; var_u[2]~reg0_Duplicate_2          ; var_y[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.083     ; 3.512      ;
+; 6.298 ; var_y[1]~reg0_Duplicate_1          ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.085     ; 3.615      ;
++-------+------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'Clock'                                                                                                                     ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.404 ; var_u[1]~reg0_Duplicate_2           ; var_u[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 0.669      ;
+; 0.404 ; var_x[1]~reg0_Duplicate_1           ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 0.669      ;
+; 0.404 ; var_u[2]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 0.669      ;
+; 0.404 ; current_state.S_IDLE                ; current_state.S_IDLE                ; Clock        ; Clock       ; 0.000        ; 0.079      ; 0.669      ;
+; 0.409 ; var_x[0]~reg0_Duplicate_1           ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 0.674      ;
+; 0.409 ; var_y[0]~reg0_Duplicate_1           ; var_y[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 0.674      ;
+; 0.556 ; current_state.S_ACT_RE~_Duplicate_1 ; current_state.S_WAIT_DATA           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 0.821      ;
+; 0.557 ; current_state.S_SEND_ADDR           ; current_state.S_ACT_RE~_Duplicate_1 ; Clock        ; Clock       ; 0.000        ; 0.079      ; 0.822      ;
+; 0.591 ; current_state.S_ACCUM~_Duplicate_1  ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.079      ; 0.856      ;
+; 0.643 ; var_x[0]~reg0_Duplicate_1           ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.077      ; 0.906      ;
+; 0.652 ; var_u[0]~reg0_Duplicate_2           ; var_u[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 0.917      ;
+; 0.667 ; current_state.S_IDLE                ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 0.932      ;
+; 0.711 ; current_state.S_DONE~_Duplicate_1   ; current_state.S_IDLE                ; Clock        ; Clock       ; 0.000        ; 0.079      ; 0.976      ;
+; 0.718 ; current_state.S_ACCUM~_Duplicate_1  ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 0.983      ;
+; 0.797 ; var_u[1]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.062      ;
+; 0.933 ; var_u[0]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.198      ;
+; 0.944 ; var_x[2]~reg0_Duplicate_1           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.207      ;
+; 1.152 ; var_v[2]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.417      ;
+; 1.161 ; var_v[0]~reg0_Duplicate_2           ; var_v[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.426      ;
+; 1.167 ; var_y[1]~reg0_Duplicate_1           ; var_y[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.432      ;
+; 1.198 ; var_x[0]~reg0_Duplicate_1           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.461      ;
+; 1.202 ; var_x[2]~reg0_Duplicate_1           ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.465      ;
+; 1.237 ; var_x[2]~reg0_Duplicate_1           ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.502      ;
+; 1.269 ; var_v[2]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.532      ;
+; 1.291 ; var_x[0]~reg0_Duplicate_1           ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.556      ;
+; 1.301 ; var_v[1]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.566      ;
+; 1.308 ; var_v[0]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.573      ;
+; 1.315 ; var_y[2]~reg0_Duplicate_1           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.578      ;
+; 1.335 ; var_y[2]~reg0_Duplicate_1           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.600      ;
+; 1.335 ; var_x[1]~reg0_Duplicate_1           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.600      ;
+; 1.356 ; current_state.S_WAIT_DATA           ; current_state.S_ACCUM~_Duplicate_1  ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.621      ;
+; 1.395 ; var_v[1]~reg0_Duplicate_2           ; var_v[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.660      ;
+; 1.395 ; var_v[0]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.658      ;
+; 1.398 ; var_x[1]~reg0_Duplicate_1           ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.665      ;
+; 1.431 ; var_u[0]~reg0_Duplicate_2           ; var_u[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.696      ;
+; 1.452 ; var_y[0]~reg0_Duplicate_1           ; var_y[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.058      ; 1.620      ;
+; 1.462 ; var_v[0]~reg0_Duplicate_2           ; var_v[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.727      ;
+; 1.473 ; var_x[0]~reg0_Duplicate_1           ; var_x[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.059      ; 1.642      ;
+; 1.475 ; var_x[0]~reg0_Duplicate_1           ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.738      ;
+; 1.492 ; var_v[1]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.755      ;
+; 1.527 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.061      ; 1.698      ;
+; 1.527 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.061      ; 1.698      ;
+; 1.527 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.061      ; 1.698      ;
+; 1.556 ; var_y[1]~reg0_Duplicate_1           ; var_y[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.056      ; 1.722      ;
+; 1.573 ; var_y[2]~reg0_Duplicate_1           ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.077      ; 1.836      ;
+; 1.612 ; var_x[1]~reg0_Duplicate_1           ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.877      ;
+; 1.630 ; var_x[1]~reg0_Duplicate_1           ; var_x[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.061      ; 1.801      ;
+; 1.649 ; var_u[1]~reg0_Duplicate_2           ; var_u[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.060      ; 1.819      ;
+; 1.649 ; var_u[1]~reg0_Duplicate_2           ; var_u[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.060      ; 1.819      ;
+; 1.658 ; var_v[2]~reg0_Duplicate_2           ; var_v[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.058      ; 1.826      ;
+; 1.658 ; var_v[2]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.058      ; 1.826      ;
+; 1.698 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.965      ;
+; 1.698 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.965      ;
+; 1.709 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 1.974      ;
+; 1.773 ; var_x[2]~reg0_Duplicate_1           ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.059      ; 1.942      ;
+; 1.784 ; var_y[0]~reg0_Duplicate_1           ; var_y[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.081      ; 2.051      ;
+; 1.797 ; current_state.S_ACCUM~_Duplicate_1  ; current_state.S_DONE                ; Clock        ; Clock       ; 0.000        ; 0.058      ; 1.965      ;
+; 1.802 ; Start                               ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 3.055      ; 4.043      ;
+; 1.806 ; var_x[0]~reg0_Duplicate_1           ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.059      ; 1.975      ;
+; 1.828 ; var_v[1]~reg0_Duplicate_2           ; var_v[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.058      ; 1.996      ;
+; 1.828 ; var_v[1]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.058      ; 1.996      ;
+; 1.835 ; var_v[0]~reg0_Duplicate_2           ; var_v[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.058      ; 2.003      ;
+; 1.835 ; var_v[0]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.058      ; 2.003      ;
+; 1.870 ; var_y[2]~reg0_Duplicate_1           ; var_y[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.059      ; 2.039      ;
+; 1.873 ; var_x[0]~reg0_Duplicate_1           ; var_x[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.059      ; 2.042      ;
+; 1.895 ; var_u[1]~reg0_Duplicate_2           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.075      ; 2.156      ;
+; 1.914 ; current_state.S_SEND_ADDR           ; current_state.S_ACT_RE              ; Clock        ; Clock       ; 0.000        ; 0.058      ; 2.082      ;
+; 1.914 ; var_u[1]~reg0_Duplicate_2           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.077      ; 2.177      ;
+; 1.915 ; current_state.S_WAIT_DATA           ; current_state.S_ACCUM               ; Clock        ; Clock       ; 0.000        ; 0.058      ; 2.083      ;
+; 1.918 ; var_u[0]~reg0_Duplicate_2           ; var_u[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.060      ; 2.088      ;
+; 1.918 ; var_u[0]~reg0_Duplicate_2           ; var_u[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.060      ; 2.088      ;
+; 1.927 ; current_state.S_ACCUM~_Duplicate_1  ; var_y[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.062      ; 2.099      ;
+; 1.927 ; current_state.S_ACCUM~_Duplicate_1  ; var_y[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.062      ; 2.099      ;
+; 1.933 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.085      ; 2.204      ;
+; 1.933 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.085      ; 2.204      ;
+; 1.933 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.085      ; 2.204      ;
+; 1.934 ; var_x[1]~reg0_Duplicate_1           ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.061      ; 2.105      ;
+; 1.940 ; current_state.S_ACCUM~_Duplicate_1  ; var_y[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.061      ; 2.111      ;
+; 1.942 ; var_u[2]~reg0_Duplicate_2           ; var_u[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.057      ; 2.109      ;
+; 1.942 ; var_u[2]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.057      ; 2.109      ;
+; 1.954 ; var_v[0]~reg0_Duplicate_2           ; var_v[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.062      ; 2.126      ;
+; 1.954 ; var_v[0]~reg0_Duplicate_2           ; var_v[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.062      ; 2.126      ;
+; 1.956 ; var_y[0]~reg0_Duplicate_1           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.077      ; 2.219      ;
+; 1.962 ; Start                               ; current_state.S_IDLE                ; Clock        ; Clock       ; 0.000        ; 3.055      ; 4.203      ;
+; 2.011 ; var_v[0]~reg0_Duplicate_2           ; var_v[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.059      ; 2.180      ;
+; 2.011 ; var_v[0]~reg0_Duplicate_2           ; var_v[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.059      ; 2.180      ;
+; 2.023 ; current_state.S_ACCUM~_Duplicate_1  ; var_y[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.083      ; 2.292      ;
+; 2.024 ; var_u[1]~reg0_Duplicate_2           ; var_y[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.058      ; 2.192      ;
+; 2.024 ; var_u[1]~reg0_Duplicate_2           ; var_y[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.058      ; 2.192      ;
+; 2.025 ; var_y[1]~reg0_Duplicate_1           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.075      ; 2.286      ;
+; 2.031 ; var_u[0]~reg0_Duplicate_2           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.075      ; 2.292      ;
+; 2.035 ; var_u[1]~reg0_Duplicate_2           ; var_y[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.057      ; 2.202      ;
+; 2.050 ; var_u[0]~reg0_Duplicate_2           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.077      ; 2.313      ;
+; 2.053 ; var_u[0]~reg0_Duplicate_2           ; var_u[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.055      ; 2.218      ;
+; 2.053 ; var_u[0]~reg0_Duplicate_2           ; var_u[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.055      ; 2.218      ;
+; 2.061 ; var_y[2]~reg0_Duplicate_1           ; var_x[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.059      ; 2.230      ;
+; 2.061 ; var_y[2]~reg0_Duplicate_1           ; var_x[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.059      ; 2.230      ;
+; 2.061 ; var_y[2]~reg0_Duplicate_1           ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.059      ; 2.230      ;
+; 2.077 ; var_u[1]~reg0_Duplicate_2           ; var_y[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.079      ; 2.342      ;
+; 2.082 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.065      ; 2.257      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 131.27 MHz ; 131.27 MHz      ; Clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; Clock ; 2.382 ; 0.000              ;
++-------+-------+--------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; Clock ; 0.355 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; Clock ; 4.750 ; 0.000                            ;
++-------+-------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'Clock'                                                                                                                    ;
++-------+------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 2.382 ; var_y[1]~reg0                      ; var_y[1]                            ; Clock        ; Clock       ; 10.000       ; -2.751     ; 3.847      ;
+; 3.543 ; var_v[0]~reg0_Duplicate_1          ; Address[0]                          ; Clock        ; Clock       ; 10.000       ; -2.754     ; 2.683      ;
+; 3.548 ; current_state.S_DONE               ; Ready                               ; Clock        ; Clock       ; 10.000       ; -2.749     ; 2.683      ;
+; 3.553 ; var_v[0]~reg0                      ; var_v[0]                            ; Clock        ; Clock       ; 10.000       ; -2.754     ; 2.673      ;
+; 3.555 ; var_u[2]~reg0_Duplicate_1          ; Address[5]                          ; Clock        ; Clock       ; 10.000       ; -2.752     ; 2.673      ;
+; 3.555 ; var_u[1]~reg0_Duplicate_1          ; Address[4]                          ; Clock        ; Clock       ; 10.000       ; -2.752     ; 2.673      ;
+; 3.555 ; var_u[1]~reg0                      ; var_u[1]                            ; Clock        ; Clock       ; 10.000       ; -2.752     ; 2.673      ;
+; 3.558 ; current_state.S_ACCUM              ; Active_MAC                          ; Clock        ; Clock       ; 10.000       ; -2.749     ; 2.673      ;
+; 3.565 ; var_u[2]~reg0                      ; var_u[2]                            ; Clock        ; Clock       ; 10.000       ; -2.752     ; 2.663      ;
+; 3.567 ; var_u[0]~reg0_Duplicate_1          ; Address[3]                          ; Clock        ; Clock       ; 10.000       ; -2.750     ; 2.663      ;
+; 3.567 ; var_u[0]~reg0                      ; var_u[0]                            ; Clock        ; Clock       ; 10.000       ; -2.750     ; 2.663      ;
+; 3.596 ; var_y[0]~reg0                      ; var_y[0]                            ; Clock        ; Clock       ; 10.000       ; -2.751     ; 2.633      ;
+; 3.598 ; var_x[0]~reg0                      ; var_x[0]                            ; Clock        ; Clock       ; 10.000       ; -2.749     ; 2.633      ;
+; 3.610 ; var_v[1]~reg0_Duplicate_1          ; Address[1]                          ; Clock        ; Clock       ; 10.000       ; -2.757     ; 2.613      ;
+; 3.610 ; var_v[1]~reg0                      ; var_v[1]                            ; Clock        ; Clock       ; 10.000       ; -2.757     ; 2.613      ;
+; 3.618 ; current_state.S_ACT_RE             ; Read_Enable                         ; Clock        ; Clock       ; 10.000       ; -2.749     ; 2.613      ;
+; 3.618 ; var_y[2]~reg0                      ; var_y[2]                            ; Clock        ; Clock       ; 10.000       ; -2.749     ; 2.613      ;
+; 3.618 ; var_x[2]~reg0                      ; var_x[2]                            ; Clock        ; Clock       ; 10.000       ; -2.749     ; 2.613      ;
+; 3.618 ; var_x[1]~reg0                      ; var_x[1]                            ; Clock        ; Clock       ; 10.000       ; -2.749     ; 2.613      ;
+; 3.635 ; var_v[2]~reg0_Duplicate_1          ; Address[2]                          ; Clock        ; Clock       ; 10.000       ; -2.752     ; 2.593      ;
+; 3.635 ; var_v[2]~reg0                      ; var_v[2]                            ; Clock        ; Clock       ; 10.000       ; -2.752     ; 2.593      ;
+; 4.937 ; Reset                              ; var_u[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.671      ; 6.621      ;
+; 4.937 ; Reset                              ; var_u[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.671      ; 6.621      ;
+; 5.163 ; Reset                              ; current_state.S_ACT_RE              ; Clock        ; Clock       ; 10.000       ; 2.669      ; 6.393      ;
+; 5.198 ; Reset                              ; var_y[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.669      ; 6.358      ;
+; 5.259 ; Reset                              ; var_u[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.670      ; 6.298      ;
+; 5.259 ; Reset                              ; var_u[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.670      ; 6.298      ;
+; 5.297 ; Reset                              ; current_state.S_ACCUM               ; Clock        ; Clock       ; 10.000       ; 2.669      ; 6.259      ;
+; 5.323 ; Reset                              ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; 2.669      ; 6.233      ;
+; 5.456 ; Reset                              ; var_y[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.670      ; 6.101      ;
+; 5.506 ; Reset                              ; var_v[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.677      ; 6.058      ;
+; 5.506 ; Reset                              ; var_v[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.677      ; 6.058      ;
+; 5.508 ; Reset                              ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.669      ; 6.048      ;
+; 5.513 ; Reset                              ; var_v[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.673      ; 6.047      ;
+; 5.513 ; Reset                              ; var_v[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.673      ; 6.047      ;
+; 5.517 ; Reset                              ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.669      ; 6.039      ;
+; 5.545 ; var_v[1]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.079     ; 4.263      ;
+; 5.595 ; Reset                              ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.671      ; 6.075      ;
+; 5.613 ; Reset                              ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.673      ; 6.059      ;
+; 5.613 ; Reset                              ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.673      ; 6.059      ;
+; 5.628 ; Reset                              ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.669      ; 5.928      ;
+; 5.635 ; var_v[0]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.079     ; 4.173      ;
+; 5.695 ; Reset                              ; var_u[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.672      ; 5.864      ;
+; 5.695 ; Reset                              ; var_u[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.672      ; 5.864      ;
+; 5.715 ; Reset                              ; var_v[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.672      ; 5.844      ;
+; 5.715 ; Reset                              ; var_v[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.672      ; 5.844      ;
+; 5.754 ; Reset                              ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.673      ; 5.918      ;
+; 5.756 ; var_v[2]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.079     ; 4.052      ;
+; 5.784 ; Reset                              ; var_y[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.677      ; 5.892      ;
+; 5.790 ; var_u[2]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.077     ; 4.020      ;
+; 5.823 ; Reset                              ; current_state.S_ACCUM~_Duplicate_1  ; Clock        ; Clock       ; 10.000       ; 2.671      ; 5.847      ;
+; 5.872 ; Reset                              ; var_u[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 2.675      ; 5.802      ;
+; 5.876 ; Reset                              ; var_u[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 2.675      ; 5.798      ;
+; 5.876 ; Reset                              ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 2.675      ; 5.798      ;
+; 5.877 ; Reset                              ; var_y[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; 2.670      ; 5.680      ;
+; 5.945 ; Reset                              ; var_y[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 2.675      ; 5.729      ;
+; 5.969 ; var_y[1]~reg0_Duplicate_1          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.839      ;
+; 6.010 ; Reset                              ; var_v[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 2.677      ; 5.666      ;
+; 6.025 ; Reset                              ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 2.677      ; 5.651      ;
+; 6.025 ; Reset                              ; var_v[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 2.677      ; 5.651      ;
+; 6.049 ; var_y[0]~reg0_Duplicate_1          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.077     ; 3.761      ;
+; 6.125 ; var_v[1]~reg0_Duplicate_2          ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.683      ;
+; 6.125 ; var_v[1]~reg0_Duplicate_2          ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.683      ;
+; 6.125 ; var_v[1]~reg0_Duplicate_2          ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.683      ;
+; 6.143 ; var_v[1]~reg0_Duplicate_2          ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.077     ; 3.779      ;
+; 6.157 ; var_v[1]~reg0_Duplicate_2          ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.075     ; 3.767      ;
+; 6.157 ; var_v[1]~reg0_Duplicate_2          ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.075     ; 3.767      ;
+; 6.161 ; Reset                              ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 10.000       ; 2.671      ; 5.509      ;
+; 6.215 ; var_v[0]~reg0_Duplicate_2          ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.593      ;
+; 6.215 ; var_v[0]~reg0_Duplicate_2          ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.593      ;
+; 6.215 ; var_v[0]~reg0_Duplicate_2          ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.593      ;
+; 6.233 ; var_v[0]~reg0_Duplicate_2          ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.077     ; 3.689      ;
+; 6.247 ; var_v[0]~reg0_Duplicate_2          ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.075     ; 3.677      ;
+; 6.247 ; var_v[0]~reg0_Duplicate_2          ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.075     ; 3.677      ;
+; 6.259 ; var_u[0]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.077     ; 3.551      ;
+; 6.336 ; var_v[2]~reg0_Duplicate_2          ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.472      ;
+; 6.336 ; var_v[2]~reg0_Duplicate_2          ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.472      ;
+; 6.336 ; var_v[2]~reg0_Duplicate_2          ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.472      ;
+; 6.354 ; var_v[2]~reg0_Duplicate_2          ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.077     ; 3.568      ;
+; 6.368 ; var_v[2]~reg0_Duplicate_2          ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.075     ; 3.556      ;
+; 6.368 ; var_v[2]~reg0_Duplicate_2          ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.075     ; 3.556      ;
+; 6.370 ; var_u[2]~reg0_Duplicate_2          ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.077     ; 3.440      ;
+; 6.370 ; var_u[2]~reg0_Duplicate_2          ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.077     ; 3.440      ;
+; 6.370 ; var_u[2]~reg0_Duplicate_2          ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.077     ; 3.440      ;
+; 6.388 ; var_u[2]~reg0_Duplicate_2          ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.075     ; 3.536      ;
+; 6.388 ; var_u[1]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.077     ; 3.422      ;
+; 6.402 ; var_u[2]~reg0_Duplicate_2          ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.073     ; 3.524      ;
+; 6.402 ; var_u[2]~reg0_Duplicate_2          ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.073     ; 3.524      ;
+; 6.467 ; var_v[1]~reg0_Duplicate_2          ; var_y[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.341      ;
+; 6.474 ; current_state.S_ACCUM~_Duplicate_1 ; var_u[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.072     ; 3.341      ;
+; 6.474 ; current_state.S_ACCUM~_Duplicate_1 ; var_u[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.072     ; 3.341      ;
+; 6.480 ; Reset                              ; current_state.S_IDLE                ; Clock        ; Clock       ; 10.000       ; 2.671      ; 5.190      ;
+; 6.480 ; Reset                              ; current_state.S_WAIT_DATA           ; Clock        ; Clock       ; 10.000       ; 2.671      ; 5.190      ;
+; 6.480 ; Reset                              ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 10.000       ; 2.671      ; 5.190      ;
+; 6.481 ; Reset                              ; current_state.S_ACT_RE~_Duplicate_1 ; Clock        ; Clock       ; 10.000       ; 2.671      ; 5.189      ;
+; 6.490 ; current_state.S_ACCUM~_Duplicate_1 ; var_u[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.071     ; 3.326      ;
+; 6.490 ; current_state.S_ACCUM~_Duplicate_1 ; var_u[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.071     ; 3.326      ;
+; 6.549 ; var_y[1]~reg0_Duplicate_1          ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.259      ;
+; 6.549 ; var_y[1]~reg0_Duplicate_1          ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.259      ;
+; 6.549 ; var_y[1]~reg0_Duplicate_1          ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.079     ; 3.259      ;
++-------+------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'Clock'                                                                                                                      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.355 ; var_u[1]~reg0_Duplicate_2           ; var_u[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.597      ;
+; 0.355 ; var_x[1]~reg0_Duplicate_1           ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.597      ;
+; 0.355 ; var_u[2]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.597      ;
+; 0.355 ; current_state.S_IDLE                ; current_state.S_IDLE                ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.597      ;
+; 0.366 ; var_x[0]~reg0_Duplicate_1           ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.608      ;
+; 0.366 ; var_y[0]~reg0_Duplicate_1           ; var_y[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.608      ;
+; 0.510 ; current_state.S_ACT_RE~_Duplicate_1 ; current_state.S_WAIT_DATA           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.752      ;
+; 0.511 ; current_state.S_SEND_ADDR           ; current_state.S_ACT_RE~_Duplicate_1 ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.753      ;
+; 0.542 ; current_state.S_ACCUM~_Duplicate_1  ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.784      ;
+; 0.594 ; var_u[0]~reg0_Duplicate_2           ; var_u[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.836      ;
+; 0.595 ; var_x[0]~reg0_Duplicate_1           ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.069      ; 0.835      ;
+; 0.610 ; current_state.S_IDLE                ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.852      ;
+; 0.651 ; current_state.S_DONE~_Duplicate_1   ; current_state.S_IDLE                ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.893      ;
+; 0.655 ; current_state.S_ACCUM~_Duplicate_1  ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.897      ;
+; 0.729 ; var_u[1]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 0.971      ;
+; 0.838 ; var_x[2]~reg0_Duplicate_1           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.078      ;
+; 0.851 ; var_u[0]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.093      ;
+; 1.049 ; var_v[2]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.291      ;
+; 1.054 ; var_v[0]~reg0_Duplicate_2           ; var_v[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.296      ;
+; 1.056 ; var_y[1]~reg0_Duplicate_1           ; var_y[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.298      ;
+; 1.065 ; var_x[2]~reg0_Duplicate_1           ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.305      ;
+; 1.104 ; var_x[0]~reg0_Duplicate_1           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.344      ;
+; 1.130 ; var_x[2]~reg0_Duplicate_1           ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.372      ;
+; 1.171 ; var_y[2]~reg0_Duplicate_1           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.411      ;
+; 1.175 ; var_v[2]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.415      ;
+; 1.188 ; var_v[1]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.430      ;
+; 1.193 ; var_x[0]~reg0_Duplicate_1           ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.435      ;
+; 1.194 ; var_v[0]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.436      ;
+; 1.207 ; var_y[2]~reg0_Duplicate_1           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.449      ;
+; 1.239 ; var_x[1]~reg0_Duplicate_1           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.481      ;
+; 1.251 ; current_state.S_WAIT_DATA           ; current_state.S_ACCUM~_Duplicate_1  ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.493      ;
+; 1.270 ; var_v[1]~reg0_Duplicate_2           ; var_v[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.512      ;
+; 1.285 ; var_u[0]~reg0_Duplicate_2           ; var_u[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.527      ;
+; 1.291 ; var_v[0]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.531      ;
+; 1.293 ; var_x[1]~reg0_Duplicate_1           ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.537      ;
+; 1.320 ; var_v[0]~reg0_Duplicate_2           ; var_v[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.562      ;
+; 1.331 ; var_y[0]~reg0_Duplicate_1           ; var_y[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.048      ; 1.476      ;
+; 1.352 ; var_x[0]~reg0_Duplicate_1           ; var_x[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.048      ; 1.497      ;
+; 1.363 ; var_x[0]~reg0_Duplicate_1           ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.603      ;
+; 1.377 ; var_v[1]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.617      ;
+; 1.398 ; var_y[2]~reg0_Duplicate_1           ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.638      ;
+; 1.400 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.050      ; 1.547      ;
+; 1.400 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.050      ; 1.547      ;
+; 1.400 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.050      ; 1.547      ;
+; 1.422 ; var_y[1]~reg0_Duplicate_1           ; var_y[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.046      ; 1.565      ;
+; 1.492 ; var_x[1]~reg0_Duplicate_1           ; var_x[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.050      ; 1.639      ;
+; 1.496 ; var_x[1]~reg0_Duplicate_1           ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.738      ;
+; 1.498 ; var_u[1]~reg0_Duplicate_2           ; var_u[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.049      ; 1.644      ;
+; 1.498 ; var_u[1]~reg0_Duplicate_2           ; var_u[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.049      ; 1.644      ;
+; 1.520 ; var_v[2]~reg0_Duplicate_2           ; var_v[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.047      ; 1.664      ;
+; 1.520 ; var_v[2]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.047      ; 1.664      ;
+; 1.566 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.810      ;
+; 1.566 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.810      ;
+; 1.580 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.071      ; 1.822      ;
+; 1.631 ; var_x[2]~reg0_Duplicate_1           ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.048      ; 1.776      ;
+; 1.639 ; var_y[0]~reg0_Duplicate_1           ; var_y[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.883      ;
+; 1.651 ; Start                               ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 2.770      ; 3.592      ;
+; 1.653 ; current_state.S_ACCUM~_Duplicate_1  ; current_state.S_DONE                ; Clock        ; Clock       ; 0.000        ; 0.050      ; 1.800      ;
+; 1.663 ; var_x[0]~reg0_Duplicate_1           ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.048      ; 1.808      ;
+; 1.689 ; var_v[1]~reg0_Duplicate_2           ; var_v[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.047      ; 1.833      ;
+; 1.689 ; var_v[1]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.047      ; 1.833      ;
+; 1.695 ; var_v[0]~reg0_Duplicate_2           ; var_v[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.047      ; 1.839      ;
+; 1.695 ; var_v[0]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.047      ; 1.839      ;
+; 1.705 ; var_y[2]~reg0_Duplicate_1           ; var_y[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.048      ; 1.850      ;
+; 1.710 ; var_u[1]~reg0_Duplicate_2           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.067      ; 1.948      ;
+; 1.731 ; current_state.S_ACCUM~_Duplicate_1  ; var_y[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.052      ; 1.880      ;
+; 1.731 ; current_state.S_ACCUM~_Duplicate_1  ; var_y[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.052      ; 1.880      ;
+; 1.732 ; var_x[0]~reg0_Duplicate_1           ; var_x[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.048      ; 1.877      ;
+; 1.741 ; current_state.S_ACCUM~_Duplicate_1  ; var_y[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.050      ; 1.888      ;
+; 1.746 ; var_u[1]~reg0_Duplicate_2           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.069      ; 1.986      ;
+; 1.752 ; var_u[2]~reg0_Duplicate_2           ; var_u[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.049      ; 1.898      ;
+; 1.752 ; var_u[2]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.049      ; 1.898      ;
+; 1.757 ; var_u[0]~reg0_Duplicate_2           ; var_u[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.049      ; 1.903      ;
+; 1.757 ; var_u[0]~reg0_Duplicate_2           ; var_u[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.049      ; 1.903      ;
+; 1.758 ; current_state.S_WAIT_DATA           ; current_state.S_ACCUM               ; Clock        ; Clock       ; 0.000        ; 0.050      ; 1.905      ;
+; 1.762 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.077      ; 2.010      ;
+; 1.762 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.077      ; 2.010      ;
+; 1.762 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.077      ; 2.010      ;
+; 1.777 ; current_state.S_SEND_ADDR           ; current_state.S_ACT_RE              ; Clock        ; Clock       ; 0.000        ; 0.050      ; 1.924      ;
+; 1.780 ; var_v[0]~reg0_Duplicate_2           ; var_v[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.052      ; 1.929      ;
+; 1.780 ; var_v[0]~reg0_Duplicate_2           ; var_v[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.052      ; 1.929      ;
+; 1.783 ; var_x[1]~reg0_Duplicate_1           ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.050      ; 1.930      ;
+; 1.797 ; Start                               ; current_state.S_IDLE                ; Clock        ; Clock       ; 0.000        ; 2.770      ; 3.738      ;
+; 1.807 ; var_y[0]~reg0_Duplicate_1           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.069      ; 2.047      ;
+; 1.816 ; var_y[1]~reg0_Duplicate_1           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.067      ; 2.054      ;
+; 1.841 ; var_u[1]~reg0_Duplicate_2           ; var_y[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.048      ; 1.986      ;
+; 1.841 ; var_u[1]~reg0_Duplicate_2           ; var_y[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.048      ; 1.986      ;
+; 1.842 ; current_state.S_ACCUM~_Duplicate_1  ; var_y[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.075      ; 2.088      ;
+; 1.842 ; var_v[0]~reg0_Duplicate_2           ; var_v[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.049      ; 1.988      ;
+; 1.842 ; var_v[0]~reg0_Duplicate_2           ; var_v[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.049      ; 1.988      ;
+; 1.844 ; var_y[2]~reg0_Duplicate_1           ; var_x[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.048      ; 1.989      ;
+; 1.844 ; var_y[2]~reg0_Duplicate_1           ; var_x[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.048      ; 1.989      ;
+; 1.844 ; var_y[2]~reg0_Duplicate_1           ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.048      ; 1.989      ;
+; 1.851 ; var_u[1]~reg0_Duplicate_2           ; var_y[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.046      ; 1.994      ;
+; 1.864 ; var_u[0]~reg0_Duplicate_2           ; var_u[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.047      ; 2.008      ;
+; 1.864 ; var_u[0]~reg0_Duplicate_2           ; var_u[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.047      ; 2.008      ;
+; 1.870 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.055      ; 2.022      ;
+; 1.870 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.055      ; 2.022      ;
+; 1.873 ; var_u[0]~reg0_Duplicate_2           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.067      ; 2.111      ;
+; 1.882 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.053      ; 2.032      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; Clock ; 4.727 ; 0.000              ;
++-------+-------+--------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; Clock ; 0.182 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; Clock ; 4.439 ; 0.000                            ;
++-------+-------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'Clock'                                                                                                                    ;
++-------+------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 4.727 ; var_y[1]~reg0                      ; var_y[1]                            ; Clock        ; Clock       ; 10.000       ; -1.618     ; 2.635      ;
+; 5.631 ; var_v[0]~reg0_Duplicate_1          ; Address[0]                          ; Clock        ; Clock       ; 10.000       ; -1.623     ; 1.726      ;
+; 5.641 ; var_v[0]~reg0                      ; var_v[0]                            ; Clock        ; Clock       ; 10.000       ; -1.623     ; 1.716      ;
+; 5.643 ; current_state.S_DONE               ; Ready                               ; Clock        ; Clock       ; 10.000       ; -1.611     ; 1.726      ;
+; 5.643 ; var_u[1]~reg0_Duplicate_1          ; Address[4]                          ; Clock        ; Clock       ; 10.000       ; -1.621     ; 1.716      ;
+; 5.643 ; var_u[1]~reg0                      ; var_u[1]                            ; Clock        ; Clock       ; 10.000       ; -1.621     ; 1.716      ;
+; 5.648 ; var_u[2]~reg0_Duplicate_1          ; Address[5]                          ; Clock        ; Clock       ; 10.000       ; -1.616     ; 1.716      ;
+; 5.653 ; current_state.S_ACCUM              ; Active_MAC                          ; Clock        ; Clock       ; 10.000       ; -1.611     ; 1.716      ;
+; 5.658 ; var_u[2]~reg0                      ; var_u[2]                            ; Clock        ; Clock       ; 10.000       ; -1.616     ; 1.706      ;
+; 5.660 ; var_u[0]~reg0_Duplicate_1          ; Address[3]                          ; Clock        ; Clock       ; 10.000       ; -1.614     ; 1.706      ;
+; 5.660 ; var_u[0]~reg0                      ; var_u[0]                            ; Clock        ; Clock       ; 10.000       ; -1.614     ; 1.706      ;
+; 5.686 ; var_y[0]~reg0                      ; var_y[0]                            ; Clock        ; Clock       ; 10.000       ; -1.618     ; 1.676      ;
+; 5.688 ; var_x[0]~reg0                      ; var_x[0]                            ; Clock        ; Clock       ; 10.000       ; -1.616     ; 1.676      ;
+; 5.696 ; var_v[1]~reg0_Duplicate_1          ; Address[1]                          ; Clock        ; Clock       ; 10.000       ; -1.628     ; 1.656      ;
+; 5.696 ; var_v[1]~reg0                      ; var_v[1]                            ; Clock        ; Clock       ; 10.000       ; -1.628     ; 1.656      ;
+; 5.708 ; var_y[2]~reg0                      ; var_y[2]                            ; Clock        ; Clock       ; 10.000       ; -1.616     ; 1.656      ;
+; 5.708 ; var_x[2]~reg0                      ; var_x[2]                            ; Clock        ; Clock       ; 10.000       ; -1.616     ; 1.656      ;
+; 5.708 ; var_x[1]~reg0                      ; var_x[1]                            ; Clock        ; Clock       ; 10.000       ; -1.616     ; 1.656      ;
+; 5.713 ; current_state.S_ACT_RE             ; Read_Enable                         ; Clock        ; Clock       ; 10.000       ; -1.611     ; 1.656      ;
+; 5.723 ; var_v[2]~reg0_Duplicate_1          ; Address[2]                          ; Clock        ; Clock       ; 10.000       ; -1.621     ; 1.636      ;
+; 5.723 ; var_v[2]~reg0                      ; var_v[2]                            ; Clock        ; Clock       ; 10.000       ; -1.621     ; 1.636      ;
+; 6.300 ; Reset                              ; var_u[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; 1.567      ; 4.206      ;
+; 6.300 ; Reset                              ; var_u[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 1.567      ; 4.206      ;
+; 6.400 ; Reset                              ; current_state.S_ACT_RE              ; Clock        ; Clock       ; 10.000       ; 1.562      ; 4.101      ;
+; 6.403 ; Reset                              ; var_y[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; 1.566      ; 4.102      ;
+; 6.435 ; Reset                              ; current_state.S_ACCUM               ; Clock        ; Clock       ; 10.000       ; 1.562      ; 4.066      ;
+; 6.452 ; Reset                              ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; 1.562      ; 4.049      ;
+; 6.479 ; Reset                              ; var_u[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; 1.564      ; 4.024      ;
+; 6.479 ; Reset                              ; var_u[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 1.564      ; 4.024      ;
+; 6.510 ; Reset                              ; var_v[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; 1.578      ; 4.007      ;
+; 6.510 ; Reset                              ; var_v[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 1.578      ; 4.007      ;
+; 6.559 ; Reset                              ; var_y[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; 1.568      ; 3.948      ;
+; 6.574 ; Reset                              ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; 1.566      ; 3.931      ;
+; 6.574 ; Reset                              ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; 1.566      ; 3.931      ;
+; 6.574 ; Reset                              ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; 1.566      ; 3.931      ;
+; 6.582 ; Reset                              ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 1.561      ; 3.966      ;
+; 6.593 ; Reset                              ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 1.562      ; 3.956      ;
+; 6.593 ; Reset                              ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 1.562      ; 3.956      ;
+; 6.620 ; Reset                              ; var_v[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; 1.573      ; 3.892      ;
+; 6.620 ; Reset                              ; var_v[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 1.573      ; 3.892      ;
+; 6.624 ; Reset                              ; var_u[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; 1.571      ; 3.886      ;
+; 6.624 ; Reset                              ; var_u[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 1.571      ; 3.886      ;
+; 6.639 ; Reset                              ; var_v[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; 1.571      ; 3.871      ;
+; 6.639 ; Reset                              ; var_v[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 1.571      ; 3.871      ;
+; 6.694 ; Reset                              ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 1.562      ; 3.855      ;
+; 6.705 ; Reset                              ; var_y[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 1.566      ; 3.848      ;
+; 6.731 ; Reset                              ; var_y[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; 1.568      ; 3.776      ;
+; 6.742 ; Reset                              ; current_state.S_ACCUM~_Duplicate_1  ; Clock        ; Clock       ; 10.000       ; 1.561      ; 3.806      ;
+; 6.757 ; Reset                              ; var_u[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 1.564      ; 3.794      ;
+; 6.757 ; Reset                              ; var_u[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 1.564      ; 3.794      ;
+; 6.757 ; Reset                              ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 1.564      ; 3.794      ;
+; 6.799 ; Reset                              ; var_y[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; 1.564      ; 3.752      ;
+; 6.851 ; Reset                              ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 1.566      ; 3.702      ;
+; 6.851 ; Reset                              ; var_v[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 1.566      ; 3.702      ;
+; 6.851 ; Reset                              ; var_v[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 10.000       ; 1.566      ; 3.702      ;
+; 6.925 ; Reset                              ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 10.000       ; 1.561      ; 3.623      ;
+; 7.063 ; Reset                              ; current_state.S_IDLE                ; Clock        ; Clock       ; 10.000       ; 1.561      ; 3.485      ;
+; 7.063 ; Reset                              ; current_state.S_WAIT_DATA           ; Clock        ; Clock       ; 10.000       ; 1.561      ; 3.485      ;
+; 7.063 ; Reset                              ; current_state.S_ACT_RE~_Duplicate_1 ; Clock        ; Clock       ; 10.000       ; 1.561      ; 3.485      ;
+; 7.063 ; Reset                              ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 10.000       ; 1.561      ; 3.485      ;
+; 7.553 ; var_v[1]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.045     ; 2.341      ;
+; 7.614 ; var_v[0]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.045     ; 2.280      ;
+; 7.667 ; var_u[2]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.043     ; 2.229      ;
+; 7.686 ; var_v[2]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.045     ; 2.208      ;
+; 7.718 ; Start                              ; current_state.S_IDLE                ; Clock        ; Clock       ; 10.000       ; 1.561      ; 2.830      ;
+; 7.802 ; Start                              ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 10.000       ; 1.561      ; 2.746      ;
+; 7.804 ; var_y[1]~reg0_Duplicate_1          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.045     ; 2.090      ;
+; 7.825 ; var_y[0]~reg0_Duplicate_1          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.043     ; 2.071      ;
+; 7.900 ; var_v[1]~reg0_Duplicate_2          ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.998      ;
+; 7.900 ; var_v[1]~reg0_Duplicate_2          ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.998      ;
+; 7.900 ; var_v[1]~reg0_Duplicate_2          ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.998      ;
+; 7.908 ; var_v[1]~reg0_Duplicate_2          ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.046     ; 2.033      ;
+; 7.919 ; var_v[1]~reg0_Duplicate_2          ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.045     ; 2.023      ;
+; 7.919 ; var_v[1]~reg0_Duplicate_2          ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.045     ; 2.023      ;
+; 7.958 ; var_u[0]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.043     ; 1.938      ;
+; 7.961 ; var_v[0]~reg0_Duplicate_2          ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.937      ;
+; 7.961 ; var_v[0]~reg0_Duplicate_2          ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.937      ;
+; 7.961 ; var_v[0]~reg0_Duplicate_2          ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.937      ;
+; 7.969 ; var_v[0]~reg0_Duplicate_2          ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.046     ; 1.972      ;
+; 7.980 ; var_v[0]~reg0_Duplicate_2          ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.045     ; 1.962      ;
+; 7.980 ; var_v[0]~reg0_Duplicate_2          ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.045     ; 1.962      ;
+; 8.014 ; var_u[2]~reg0_Duplicate_2          ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.039     ; 1.886      ;
+; 8.014 ; var_u[2]~reg0_Duplicate_2          ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.039     ; 1.886      ;
+; 8.014 ; var_u[2]~reg0_Duplicate_2          ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.039     ; 1.886      ;
+; 8.022 ; var_u[2]~reg0_Duplicate_2          ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.044     ; 1.921      ;
+; 8.033 ; var_v[2]~reg0_Duplicate_2          ; var_x[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.865      ;
+; 8.033 ; var_v[2]~reg0_Duplicate_2          ; var_x[1]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.865      ;
+; 8.033 ; var_v[2]~reg0_Duplicate_2          ; var_x[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.865      ;
+; 8.033 ; var_u[2]~reg0_Duplicate_2          ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.043     ; 1.911      ;
+; 8.033 ; var_u[2]~reg0_Duplicate_2          ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.043     ; 1.911      ;
+; 8.041 ; var_v[2]~reg0_Duplicate_2          ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.046     ; 1.900      ;
+; 8.044 ; var_u[1]~reg0_Duplicate_2          ; current_state.S_DONE                ; Clock        ; Clock       ; 10.000       ; -0.043     ; 1.852      ;
+; 8.052 ; var_v[2]~reg0_Duplicate_2          ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.045     ; 1.890      ;
+; 8.052 ; var_v[2]~reg0_Duplicate_2          ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.045     ; 1.890      ;
+; 8.082 ; var_v[1]~reg0_Duplicate_2          ; var_y[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.816      ;
+; 8.140 ; current_state.S_ACCUM~_Duplicate_1 ; var_u[0]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.037     ; 1.762      ;
+; 8.140 ; current_state.S_ACCUM~_Duplicate_1 ; var_u[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.037     ; 1.762      ;
+; 8.143 ; var_v[0]~reg0_Duplicate_2          ; var_y[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.041     ; 1.755      ;
+; 8.145 ; current_state.S_ACCUM~_Duplicate_1 ; var_u[2]~reg0                       ; Clock        ; Clock       ; 10.000       ; -0.034     ; 1.760      ;
+; 8.145 ; current_state.S_ACCUM~_Duplicate_1 ; var_u[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 10.000       ; -0.034     ; 1.760      ;
++-------+------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'Clock'                                                                                                                      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.182 ; var_u[1]~reg0_Duplicate_2           ; var_u[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; var_u[2]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.307      ;
+; 0.183 ; var_x[1]~reg0_Duplicate_1           ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.307      ;
+; 0.183 ; current_state.S_IDLE                ; current_state.S_IDLE                ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.307      ;
+; 0.189 ; var_x[0]~reg0_Duplicate_1           ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.314      ;
+; 0.189 ; var_y[0]~reg0_Duplicate_1           ; var_y[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.314      ;
+; 0.249 ; current_state.S_ACT_RE~_Duplicate_1 ; current_state.S_WAIT_DATA           ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.373      ;
+; 0.251 ; current_state.S_SEND_ADDR           ; current_state.S_ACT_RE~_Duplicate_1 ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.375      ;
+; 0.269 ; current_state.S_ACCUM~_Duplicate_1  ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.393      ;
+; 0.285 ; var_x[0]~reg0_Duplicate_1           ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.039      ; 0.408      ;
+; 0.299 ; var_u[0]~reg0_Duplicate_2           ; var_u[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.424      ;
+; 0.304 ; current_state.S_IDLE                ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.428      ;
+; 0.324 ; current_state.S_DONE~_Duplicate_1   ; current_state.S_IDLE                ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.448      ;
+; 0.332 ; current_state.S_ACCUM~_Duplicate_1  ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.456      ;
+; 0.359 ; var_u[1]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.484      ;
+; 0.423 ; var_x[2]~reg0_Duplicate_1           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.039      ; 0.546      ;
+; 0.425 ; var_u[0]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.550      ;
+; 0.515 ; var_y[1]~reg0_Duplicate_1           ; var_y[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.640      ;
+; 0.520 ; var_v[0]~reg0_Duplicate_2           ; var_v[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.645      ;
+; 0.523 ; var_v[2]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.648      ;
+; 0.543 ; var_x[0]~reg0_Duplicate_1           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.039      ; 0.666      ;
+; 0.546 ; var_x[2]~reg0_Duplicate_1           ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.039      ; 0.669      ;
+; 0.554 ; var_x[2]~reg0_Duplicate_1           ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.679      ;
+; 0.569 ; var_x[0]~reg0_Duplicate_1           ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.694      ;
+; 0.570 ; var_v[2]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.039      ; 0.693      ;
+; 0.591 ; var_y[2]~reg0_Duplicate_1           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.039      ; 0.714      ;
+; 0.599 ; var_v[1]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.724      ;
+; 0.601 ; var_x[1]~reg0_Duplicate_1           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.725      ;
+; 0.605 ; var_v[0]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.730      ;
+; 0.609 ; var_y[2]~reg0_Duplicate_1           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.734      ;
+; 0.620 ; current_state.S_WAIT_DATA           ; current_state.S_ACCUM~_Duplicate_1  ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.744      ;
+; 0.625 ; var_x[1]~reg0_Duplicate_1           ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.751      ;
+; 0.629 ; var_v[0]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.039      ; 0.752      ;
+; 0.635 ; var_v[1]~reg0_Duplicate_2           ; var_v[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.760      ;
+; 0.666 ; var_x[0]~reg0_Duplicate_1           ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.039      ; 0.789      ;
+; 0.671 ; var_y[0]~reg0_Duplicate_1           ; var_y[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.034      ; 0.761      ;
+; 0.675 ; var_v[1]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.039      ; 0.798      ;
+; 0.681 ; var_x[0]~reg0_Duplicate_1           ; var_x[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.034      ; 0.771      ;
+; 0.689 ; var_u[0]~reg0_Duplicate_2           ; var_u[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.814      ;
+; 0.694 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.035      ; 0.785      ;
+; 0.694 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.035      ; 0.785      ;
+; 0.694 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.035      ; 0.785      ;
+; 0.702 ; var_v[0]~reg0_Duplicate_2           ; var_v[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 0.827      ;
+; 0.714 ; var_y[2]~reg0_Duplicate_1           ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.039      ; 0.837      ;
+; 0.723 ; var_y[1]~reg0_Duplicate_1           ; var_y[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.032      ; 0.811      ;
+; 0.724 ; var_x[1]~reg0_Duplicate_1           ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.848      ;
+; 0.770 ; var_x[1]~reg0_Duplicate_1           ; var_x[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.035      ; 0.861      ;
+; 0.771 ; var_v[2]~reg0_Duplicate_2           ; var_v[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.035      ; 0.862      ;
+; 0.771 ; var_v[2]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.035      ; 0.862      ;
+; 0.772 ; var_u[1]~reg0_Duplicate_2           ; var_u[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.865      ;
+; 0.772 ; var_u[1]~reg0_Duplicate_2           ; var_u[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.865      ;
+; 0.780 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.906      ;
+; 0.780 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.042      ; 0.906      ;
+; 0.786 ; current_state.S_ACCUM~_Duplicate_1  ; var_x[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.040      ; 0.910      ;
+; 0.801 ; var_y[0]~reg0_Duplicate_1           ; var_y[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.043      ; 0.928      ;
+; 0.819 ; var_x[2]~reg0_Duplicate_1           ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.034      ; 0.909      ;
+; 0.834 ; var_x[0]~reg0_Duplicate_1           ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.034      ; 0.924      ;
+; 0.841 ; var_u[1]~reg0_Duplicate_2           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.962      ;
+; 0.847 ; var_v[1]~reg0_Duplicate_2           ; var_v[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.035      ; 0.938      ;
+; 0.847 ; var_v[1]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.035      ; 0.938      ;
+; 0.853 ; var_v[0]~reg0_Duplicate_2           ; var_v[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.035      ; 0.944      ;
+; 0.853 ; var_v[0]~reg0_Duplicate_2           ; var_v[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.035      ; 0.944      ;
+; 0.854 ; current_state.S_ACCUM~_Duplicate_1  ; current_state.S_DONE                ; Clock        ; Clock       ; 0.000        ; 0.030      ; 0.940      ;
+; 0.859 ; var_u[1]~reg0_Duplicate_2           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.039      ; 0.982      ;
+; 0.872 ; var_x[0]~reg0_Duplicate_1           ; var_x[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.034      ; 0.962      ;
+; 0.878 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[2]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.046      ; 1.008      ;
+; 0.878 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[0]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.046      ; 1.008      ;
+; 0.878 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[1]~reg0_Duplicate_2           ; Clock        ; Clock       ; 0.000        ; 0.046      ; 1.008      ;
+; 0.878 ; var_y[0]~reg0_Duplicate_1           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.039      ; 1.001      ;
+; 0.879 ; current_state.S_ACCUM~_Duplicate_1  ; var_y[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.972      ;
+; 0.879 ; current_state.S_ACCUM~_Duplicate_1  ; var_y[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.972      ;
+; 0.880 ; var_y[2]~reg0_Duplicate_1           ; var_y[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.034      ; 0.970      ;
+; 0.885 ; current_state.S_SEND_ADDR           ; current_state.S_ACT_RE              ; Clock        ; Clock       ; 0.000        ; 0.030      ; 0.971      ;
+; 0.888 ; current_state.S_ACCUM~_Duplicate_1  ; var_y[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.035      ; 0.979      ;
+; 0.889 ; var_u[0]~reg0_Duplicate_2           ; var_u[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.982      ;
+; 0.889 ; var_u[0]~reg0_Duplicate_2           ; var_u[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.982      ;
+; 0.890 ; var_x[1]~reg0_Duplicate_1           ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.035      ; 0.981      ;
+; 0.898 ; var_y[1]~reg0_Duplicate_1           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.037      ; 1.019      ;
+; 0.907 ; var_u[0]~reg0_Duplicate_2           ; current_state.S_SEND_ADDR           ; Clock        ; Clock       ; 0.000        ; 0.037      ; 1.028      ;
+; 0.913 ; current_state.S_WAIT_DATA           ; current_state.S_ACCUM               ; Clock        ; Clock       ; 0.000        ; 0.030      ; 0.999      ;
+; 0.916 ; current_state.S_ACCUM~_Duplicate_1  ; var_y[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.044      ; 1.044      ;
+; 0.918 ; var_u[2]~reg0_Duplicate_2           ; var_u[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.032      ; 1.006      ;
+; 0.918 ; var_u[2]~reg0_Duplicate_2           ; var_u[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.032      ; 1.006      ;
+; 0.920 ; var_u[1]~reg0_Duplicate_2           ; var_y[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.034      ; 1.010      ;
+; 0.920 ; var_u[1]~reg0_Duplicate_2           ; var_y[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.034      ; 1.010      ;
+; 0.924 ; var_v[0]~reg0_Duplicate_2           ; var_v[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.042      ; 1.022      ;
+; 0.924 ; var_v[0]~reg0_Duplicate_2           ; var_v[1]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.042      ; 1.022      ;
+; 0.925 ; var_u[0]~reg0_Duplicate_2           ; var_y[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.039      ; 1.048      ;
+; 0.929 ; var_u[1]~reg0_Duplicate_2           ; var_y[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.032      ; 1.017      ;
+; 0.957 ; var_u[1]~reg0_Duplicate_2           ; var_y[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.041      ; 1.082      ;
+; 0.960 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.042      ; 1.058      ;
+; 0.960 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.042      ; 1.058      ;
+; 0.963 ; var_v[0]~reg0_Duplicate_2           ; var_v[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.037      ; 1.056      ;
+; 0.963 ; var_v[0]~reg0_Duplicate_2           ; var_v[0]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.037      ; 1.056      ;
+; 0.963 ; var_y[2]~reg0_Duplicate_1           ; var_x[0]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.034      ; 1.053      ;
+; 0.963 ; var_y[2]~reg0_Duplicate_1           ; var_x[1]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.034      ; 1.053      ;
+; 0.963 ; var_y[2]~reg0_Duplicate_1           ; var_x[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.034      ; 1.053      ;
+; 0.964 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[2]~reg0                       ; Clock        ; Clock       ; 0.000        ; 0.040      ; 1.060      ;
+; 0.964 ; current_state.S_ACCUM~_Duplicate_1  ; var_v[2]~reg0_Duplicate_1           ; Clock        ; Clock       ; 0.000        ; 0.040      ; 1.060      ;
+; 0.964 ; var_u[1]~reg0_Duplicate_2           ; current_state.S_DONE~_Duplicate_1   ; Clock        ; Clock       ; 0.000        ; 0.037      ; 1.085      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 1.543 ; 0.182 ; N/A      ; N/A     ; 4.439               ;
+;  Clock           ; 1.543 ; 0.182 ; N/A      ; N/A     ; 4.439               ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  Clock           ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+-------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; var_u[0]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; var_u[1]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; var_u[2]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; var_v[0]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; var_v[1]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; var_v[2]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; var_x[0]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; var_x[1]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; var_x[2]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; var_y[0]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; var_y[1]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; var_y[2]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Address[0]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Address[1]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Address[2]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Address[3]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Address[4]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Address[5]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Read_Enable   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Active_MAC    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Ready         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; Reset                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Clock                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Start                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; var_u[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; var_u[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; var_u[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; var_v[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; var_v[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; var_v[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; var_x[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; var_x[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; var_x[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; var_y[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; var_y[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.33 V              ; -0.00467 V          ; 0.226 V                              ; 0.087 V                              ; 2.91e-09 s                  ; 2.74e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.33 V             ; -0.00467 V         ; 0.226 V                             ; 0.087 V                             ; 2.91e-09 s                 ; 2.74e-09 s                 ; Yes                       ; Yes                       ;
+; var_y[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; Address[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; Address[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; Address[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; Address[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; Address[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; Address[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; Read_Enable   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; Active_MAC    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; Ready         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; var_u[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; var_u[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; var_u[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; var_v[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; var_v[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; var_v[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; var_x[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; var_x[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; var_x[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; var_y[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; var_y[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.33 V              ; -0.00265 V          ; 0.133 V                              ; 0.056 V                              ; 3.55e-09 s                  ; 3.31e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.33 V             ; -0.00265 V         ; 0.133 V                             ; 0.056 V                             ; 3.55e-09 s                 ; 3.31e-09 s                 ; Yes                       ; Yes                       ;
+; var_y[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; Address[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; Address[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; Address[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; Address[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; Address[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; Address[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; Read_Enable   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; Active_MAC    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; Ready         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; var_u[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; var_u[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; var_u[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; var_v[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; var_v[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; var_v[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; var_x[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; var_x[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; var_x[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; var_y[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; var_y[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.64 V              ; -0.0113 V           ; 0.208 V                              ; 0.179 V                              ; 2.38e-09 s                  ; 2.23e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.64 V             ; -0.0113 V          ; 0.208 V                             ; 0.179 V                             ; 2.38e-09 s                 ; 2.23e-09 s                 ; No                        ; Yes                       ;
+; var_y[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Address[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Address[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Address[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Address[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Address[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Address[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Read_Enable   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Active_MAC    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Ready         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Clock      ; Clock    ; 376      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Clock      ; Clock    ; 376      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; Clock  ; Clock ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Tue Dec 30 17:35:33 2025
+Info: Command: quartus_sta q3_mpeg -c q3_mpeg
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'q3_mpeg.out.sdc'
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332146): Worst-case setup slack is 1.543
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.543               0.000 Clock 
+Info (332146): Worst-case hold slack is 0.404
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.404               0.000 Clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.733
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.733               0.000 Clock 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332146): Worst-case setup slack is 2.382
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.382               0.000 Clock 
+Info (332146): Worst-case hold slack is 0.355
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.355               0.000 Clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.750
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.750               0.000 Clock 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332146): Worst-case setup slack is 4.727
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.727               0.000 Clock 
+Info (332146): Worst-case hold slack is 0.182
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.182               0.000 Clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.439
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.439               0.000 Clock 
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4961 megabytes
+    Info: Processing ended: Tue Dec 30 17:35:34 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

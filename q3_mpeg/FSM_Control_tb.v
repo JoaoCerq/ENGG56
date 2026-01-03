@@ -1,0 +1,88 @@
+`timescale 1ns / 1ps  // Define a unidade de tempo (1ns) e a precisão (1ps)
+
+module FSM_Control_tb;
+
+    reg clk;
+    reg reset;
+    reg start;
+
+    wire [2:0] var_u, var_v, var_x, var_y;
+    wire [5:0] Address;
+    wire Read_Enable;
+    wire Active_MAC;
+    wire Ready;
+
+    reg [15:0] mac_count = 0;
+
+    FSM_Control duv (
+        .Clock(clk),
+        .Reset(reset),
+        .Start(start),
+        .var_u(var_u), .var_v(var_v), .var_x(var_x), .var_y(var_y),
+        .Address(Address),
+        .Read_Enable(Read_Enable),
+        .Active_MAC(Active_MAC),
+        .Ready(Ready)
+    );
+
+    // Geracao do clock de 100MHz (Periodo de 10ns)
+    always #5 clk = ~clk;
+
+    function [79:0] get_state_name(input [2:0] state);
+        case (state)
+            3'b000: get_state_name = "IDLE";
+            3'b001: get_state_name = "SEND_ADDR";
+            3'b010: get_state_name = "ACT_RE";
+            3'b011: get_state_name = "WAIT_DATA";
+            3'b100: get_state_name = "ACCUM";
+            3'b101: get_state_name = "DONE";
+            default: get_state_name = "UNKNOWN";
+        endcase
+    endfunction
+
+    always @(posedge clk) begin
+        if (Active_MAC)
+            mac_count <= mac_count + 1;
+    end
+
+    initial begin
+        clk = 0;
+        reset = 1; // Começa em reset
+        start = 0;
+
+        repeat (2) @(negedge clk);
+        reset = 0;
+        
+        repeat (2) @(negedge clk);
+        start = 1;
+
+        @(negedge clk);
+        start = 0;
+
+        $display("Iniciando Simulacao... Aguardando processamento.");
+
+        $monitor("Tempo: %0t | Estado: %s | Pixel(x,y): (%d,%d) | Coef(u,v): (%d,%d) | Addr: %d | ReadEnable: %b | MAC: %b | Ready: %b", 
+                 $time, 
+                 get_state_name(duv.current_state),
+                 var_x, var_y, var_u, var_v, Address, Read_Enable, Active_MAC, Ready);
+
+        fork : timeout_watchdog
+            begin
+                wait (Ready == 1);
+                disable timeout_watchdog;
+            end
+            begin
+                #1000000; // Tempo limite caso a FSM trave (1 milhao de ns = 1 ms)
+                $display("[FALHA CRITICA] Timeout: O sinal Ready nunca subiu!");
+                disable timeout_watchdog;
+            end
+        join
+        
+        #50;
+
+        $display("Simulacao Concluida!");
+        $display("Total de pulsos MAC ativados: %d (deve ser 4096)", mac_count);
+        $stop;
+    end
+
+endmodule

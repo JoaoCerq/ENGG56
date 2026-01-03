@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "var_u[0]",
+					"strict" : false
+				},
+				{
+					"name" : "var_u[1]",
+					"strict" : false
+				},
+				{
+					"name" : "var_u[2]",
+					"strict" : false
+				},
+				{
+					"name" : "var_v[0]",
+					"strict" : false
+				},
+				{
+					"name" : "var_v[1]",
+					"strict" : false
+				},
+				{
+					"name" : "var_v[2]",
+					"strict" : false
+				},
+				{
+					"name" : "var_x[0]",
+					"strict" : false
+				},
+				{
+					"name" : "var_x[1]",
+					"strict" : false
+				},
+				{
+					"name" : "var_x[2]",
+					"strict" : false
+				},
+				{
+					"name" : "var_y[0]",
+					"strict" : false
+				},
+				{
+					"name" : "var_y[1]",
+					"strict" : false
+				},
+				{
+					"name" : "var_y[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Read_Enable",
+					"strict" : false
+				},
+				{
+					"name" : "Active_MAC",
+					"strict" : false
+				},
+				{
+					"name" : "Ready",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "Start",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

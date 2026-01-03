@@ -1,0 +1,106 @@
+# Reading pref.tcl
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do q1_infravermelho_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work rtl_work 
+# ** Note: (vmap-220) 'c:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# Copying c:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog  -work work +incdir+C:/pcid_trab/q1_infravermelho {C:/pcid_trab/q1_infravermelho/RemoteController.v}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 16:31:20 on Dec 30,2025
+# vlog -reportprogress 300 -work work "+incdir+C:/pcid_trab/q1_infravermelho" C:/pcid_trab/q1_infravermelho/RemoteController.v 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module RemoteController
+# 
+# Top level modules:
+# 	RemoteController
+# End time: 16:31:20 on Dec 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog  -work work +incdir+C:/pcid_trab/q1_infravermelho {C:/pcid_trab/q1_infravermelho/RemoteController_tb.v}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 16:31:20 on Dec 30,2025
+# vlog -reportprogress 300 -work work "+incdir+C:/pcid_trab/q1_infravermelho" C:/pcid_trab/q1_infravermelho/RemoteController_tb.v 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module RemoteController_tb
+# 
+# Top level modules:
+# 	RemoteController_tb
+# End time: 16:31:20 on Dec 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  RemoteController_tb
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" RemoteController_tb 
+# Start time: 16:31:20 on Dec 30,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteController(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.RemoteController_tb(fast)
+# Loading work.RemoteController(fast)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Tempo: 0 | Estado: x | Tecla Saida: 0xxx | Ready: x
+# Tempo: 5000 | Estado: 0 | Tecla Saida: 0x00 | Ready: 0
+# --- Iniciando envio da Tecla: 0x01 ---
+# Tempo: 45000 | Estado: 1 | Tecla Saida: 0x00 | Ready: 0
+# Tempo: 205000 | Estado: 2 | Tecla Saida: 0x00 | Ready: 0
+# Tempo: 285000 | Estado: 3 | Tecla Saida: 0x00 | Ready: 0
+# Tempo: 365000 | Estado: 4 | Tecla Saida: 0x00 | Ready: 0
+# Tempo: 375000 | Estado: 5 | Tecla Saida: 0x00 | Ready: 0
+# Frame enviado. Aguardando validacao...
+# Tempo: 385000 | Estado: 6 | Tecla Saida: 0x01 | Ready: 1
+# SUCESSO: Recebeu Tecla 1 (0x01) corretamente!
+# Tempo: 415000 | Estado: 0 | Tecla Saida: 0x00 | Ready: 0
+# --- Iniciando envio da Tecla: 0x16 ---
+# Tempo: 425000 | Estado: 1 | Tecla Saida: 0x00 | Ready: 0
+# Tempo: 585000 | Estado: 2 | Tecla Saida: 0x00 | Ready: 0
+# Tempo: 665000 | Estado: 3 | Tecla Saida: 0x00 | Ready: 0
+# Tempo: 745000 | Estado: 4 | Tecla Saida: 0x00 | Ready: 0
+# Tempo: 755000 | Estado: 5 | Tecla Saida: 0x00 | Ready: 0
+# Frame enviado. Aguardando validacao...
+# Tempo: 765000 | Estado: 6 | Tecla Saida: 0x16 | Ready: 1
+# SUCESSO: Recebeu Tecla Play (0x16) corretamente!
+# Tempo: 795000 | Estado: 0 | Tecla Saida: 0x00 | Ready: 0
+# --- Iniciando envio da Tecla: 0x01 ---
+# Tempo: 805000 | Estado: 1 | Tecla Saida: 0x00 | Ready: 0
+# Tempo: 965000 | Estado: 2 | Tecla Saida: 0x00 | Ready: 0
+# Tempo: 1045000 | Estado: 3 | Tecla Saida: 0x00 | Ready: 0
+# Tempo: 1125000 | Estado: 4 | Tecla Saida: 0x00 | Ready: 0
+# Tempo: 1135000 | Estado: 5 | Tecla Saida: 0x00 | Ready: 0
+# Frame enviado. Aguardando validacao...
+# Tempo: 1145000 | Estado: 0 | Tecla Saida: 0x00 | Ready: 0
+# SUCESSO: InvKey incorreto rejeitado corretamente!
+# Fim dos testes.
+# ** Note: $stop    : C:/pcid_trab/q1_infravermelho/RemoteController_tb.v(119)
+#    Time: 1210 ns  Iteration: 0  Instance: /RemoteController_tb
+# Break in Module RemoteController_tb at C:/pcid_trab/q1_infravermelho/RemoteController_tb.v line 119
+# End time: 16:31:32 on Dec 30,2025, Elapsed time: 0:00:12
+# Errors: 0, Warnings: 1
