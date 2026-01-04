@@ -5,6 +5,8 @@ Z0 !s12c _opt1
 Z1 !s99 nomlopt
 R0
 R1
+R0
+R1
 !s12c _opt
 R1
 !s11f vlog 2025.2 2025.05, May 31 2025
@@ -35,10 +37,10 @@ R2
 T_opt1
 !i145 1
 !i144 0
-!s110 1767482285
-V1;1S?QdnIn>8>H0CIM9El0
+!s110 1767491169
+VaSKI?@bY55?5L`DjONXak0
 R4
-=1-0045e296ff67-6959a3ad-c8736-1e524
+=1-0045e296ff67-6959c661-604e8-1fd53
 R1
 R5
 R6
@@ -100,22 +102,22 @@ R9
 n@f@s@m
 vtb_TOP
 2/home/joao-cerqueira/Documents/ENGG56/Project 2/tb_TOP.v
-!s110 1767482269
+!s110 1767491164
 !i10b 1
-!s100 E]Vcl>V2aP67UIHXJ2W:e0
-Ii;kFCNl:KJhdMfYD8j^kY0
+!s100 CUa^k?7hDA2bTNlA=ne450
+IA=jno:dL_j7Kn7feG8Y?Y1
 R2
-w1767482233
+w1767490265
 8/home/joao-cerqueira/Documents/ENGG56/Project 2/tb_TOP.v
 F/home/joao-cerqueira/Documents/ENGG56/Project 2/tb_TOP.v
-!i122 6
-L0 3 107
+!i122 7
+L0 3 121
 R11
 R12
 r1
 !s85 0
 31
-!s108 1767482269.000000
+!s108 1767491164.000000
 !s107 /home/joao-cerqueira/Documents/ENGG56/Project 2/tb_TOP.v|
 !s90 -reportprogress|300|-work|work|+incdir+/home/joao-cerqueira/Documents/ENGG56/Project 2|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|/home/joao-cerqueira/Documents/ENGG56/Project 2/tb_TOP.v|
 !i113 0
