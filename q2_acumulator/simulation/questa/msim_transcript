@@ -116,3 +116,5 @@
 # ** Note: $stop    : /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/tb_TOP.v(116)
 #    Time: 4910 ns  Iteration: 1  Instance: /tb_TOP
 # Break in Module tb_TOP at /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/tb_TOP.v line 116
+# End time: 19:33:50 on Jan 05,2026, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 2
