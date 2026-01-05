@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto_2
-Sun Jan  4 22:53:53 2026
+Sun Jan  4 23:09:21 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -48,15 +48,15 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jan  4 22:53:53 2026           ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan  4 23:09:21 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; projeto_2                                       ;
 ; Top-level Entity Name              ; TOP                                             ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 58                                              ;
-;     Total combinational functions  ; 38                                              ;
-;     Dedicated logic registers      ; 47                                              ;
-; Total registers                    ; 47                                              ;
+; Total logic elements               ; 57                                              ;
+;     Total combinational functions  ; 37                                              ;
+;     Dedicated logic registers      ; 46                                              ;
+; Total registers                    ; 46                                              ;
 ; Total pins                         ; 42                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -164,8 +164,7 @@ on the Quartus Prime software download page.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-12        ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -185,20 +184,20 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-------------------------------+
 ; Resource                                    ; Usage                         ;
 +---------------------------------------------+-------------------------------+
-; Estimated Total logic elements              ; 58                            ;
+; Estimated Total logic elements              ; 57                            ;
 ;                                             ;                               ;
-; Total combinational functions               ; 38                            ;
+; Total combinational functions               ; 37                            ;
 ; Logic element usage by number of LUT inputs ;                               ;
-;     -- 4 input functions                    ; 7                             ;
-;     -- 3 input functions                    ; 17                            ;
-;     -- <=2 input functions                  ; 14                            ;
+;     -- 4 input functions                    ; 10                            ;
+;     -- 3 input functions                    ; 18                            ;
+;     -- <=2 input functions                  ; 9                             ;
 ;                                             ;                               ;
 ; Logic elements by mode                      ;                               ;
-;     -- normal mode                          ; 18                            ;
+;     -- normal mode                          ; 17                            ;
 ;     -- arithmetic mode                      ; 20                            ;
 ;                                             ;                               ;
-; Total registers                             ; 47                            ;
-;     -- Dedicated logic registers            ; 47                            ;
+; Total registers                             ; 46                            ;
+;     -- Dedicated logic registers            ; 46                            ;
 ;     -- I/O registers                        ; 0                             ;
 ;                                             ;                               ;
 ; I/O pins                                    ; 42                            ;
@@ -206,9 +205,9 @@ on the Quartus Prime software download page.
 ; Embedded Multiplier 9-bit elements          ; 0                             ;
 ;                                             ;                               ;
 ; Maximum fan-out node                        ; FSM:InstFSM|current_state.ADD ;
-; Maximum fan-out                             ; 19                            ;
-; Total fan-out                               ; 308                           ;
-; Average fan-out                             ; 1.82                          ;
+; Maximum fan-out                             ; 23                            ;
+; Total fan-out                               ; 310                           ;
+; Average fan-out                             ; 1.86                          ;
 +---------------------------------------------+-------------------------------+
 
 
@@ -217,29 +216,28 @@ on the Quartus Prime software download page.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
-; |TOP                       ; 38 (0)              ; 47 (0)                    ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |TOP                    ; TOP         ; work         ;
+; |TOP                       ; 37 (0)              ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |TOP                    ; TOP         ; work         ;
 ;    |Acumulador:InstACC|    ; 16 (16)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP|Acumulador:InstACC ; Acumulador  ; work         ;
-;    |FSM:InstFSM|           ; 22 (22)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP|FSM:InstFSM        ; FSM         ; work         ;
+;    |FSM:InstFSM|           ; 21 (21)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP|FSM:InstFSM        ; FSM         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |TOP|FSM:InstFSM|current_state                                                                                                                                                                                            ;
-+----------------------------+----------------------+----------------------+----------------------+-------------------+--------------------+----------------------+----------------------------+----------------------+---------------------+
-; Name                       ; current_state.IDLE_2 ; current_state.SAVING ; current_state.ADDING ; current_state.ADD ; current_state.LOAD ; current_state.IDLE_1 ; current_state.SOLICITA_MEM ; current_state.INICIO ; current_state.READY ;
-+----------------------------+----------------------+----------------------+----------------------+-------------------+--------------------+----------------------+----------------------------+----------------------+---------------------+
-; current_state.INICIO       ; 0                    ; 0                    ; 0                    ; 0                 ; 0                  ; 0                    ; 0                          ; 0                    ; 0                   ;
-; current_state.SOLICITA_MEM ; 0                    ; 0                    ; 0                    ; 0                 ; 0                  ; 0                    ; 1                          ; 1                    ; 0                   ;
-; current_state.IDLE_1       ; 0                    ; 0                    ; 0                    ; 0                 ; 0                  ; 1                    ; 0                          ; 1                    ; 0                   ;
-; current_state.LOAD         ; 0                    ; 0                    ; 0                    ; 0                 ; 1                  ; 0                    ; 0                          ; 1                    ; 0                   ;
-; current_state.ADD          ; 0                    ; 0                    ; 0                    ; 1                 ; 0                  ; 0                    ; 0                          ; 1                    ; 0                   ;
-; current_state.ADDING       ; 0                    ; 0                    ; 1                    ; 0                 ; 0                  ; 0                    ; 0                          ; 1                    ; 0                   ;
-; current_state.SAVING       ; 0                    ; 1                    ; 0                    ; 0                 ; 0                  ; 0                    ; 0                          ; 1                    ; 0                   ;
-; current_state.IDLE_2       ; 1                    ; 0                    ; 0                    ; 0                 ; 0                  ; 0                    ; 0                          ; 1                    ; 0                   ;
-; current_state.READY        ; 0                    ; 0                    ; 0                    ; 0                 ; 0                  ; 0                    ; 0                          ; 1                    ; 1                   ;
-+----------------------------+----------------------+----------------------+----------------------+-------------------+--------------------+----------------------+----------------------------+----------------------+---------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |TOP|FSM:InstFSM|current_state                                                                                                                                                                     ;
++----------------------------+---------------------+----------------------+----------------------+-------------------+--------------------+----------------------+----------------------------+----------------------+
+; Name                       ; current_state.READY ; current_state.IDLE_2 ; current_state.SAVING ; current_state.ADD ; current_state.LOAD ; current_state.IDLE_1 ; current_state.SOLICITA_MEM ; current_state.INICIO ;
++----------------------------+---------------------+----------------------+----------------------+-------------------+--------------------+----------------------+----------------------------+----------------------+
+; current_state.INICIO       ; 0                   ; 0                    ; 0                    ; 0                 ; 0                  ; 0                    ; 0                          ; 0                    ;
+; current_state.SOLICITA_MEM ; 0                   ; 0                    ; 0                    ; 0                 ; 0                  ; 0                    ; 1                          ; 1                    ;
+; current_state.IDLE_1       ; 0                   ; 0                    ; 0                    ; 0                 ; 0                  ; 1                    ; 0                          ; 1                    ;
+; current_state.LOAD         ; 0                   ; 0                    ; 0                    ; 0                 ; 1                  ; 0                    ; 0                          ; 1                    ;
+; current_state.ADD          ; 0                   ; 0                    ; 0                    ; 1                 ; 0                  ; 0                    ; 0                          ; 1                    ;
+; current_state.SAVING       ; 0                   ; 0                    ; 1                    ; 0                 ; 0                  ; 0                    ; 0                          ; 1                    ;
+; current_state.IDLE_2       ; 0                   ; 1                    ; 0                    ; 0                 ; 0                  ; 0                    ; 0                          ; 1                    ;
+; current_state.READY        ; 1                   ; 0                    ; 0                    ; 0                 ; 0                  ; 0                    ; 0                          ; 1                    ;
++----------------------------+---------------------+----------------------+----------------------+-------------------+--------------------+----------------------+----------------------------+----------------------+
 
 
 +------------------------------------------------------------+
@@ -259,10 +257,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 47    ;
+; Total registers                              ; 46    ;
 ; Number of registers using Synchronous Clear  ; 6     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 31    ;
+; Number of registers using Asynchronous Clear ; 30    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
@@ -303,22 +301,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 42                          ;
-; cycloneiii_ff         ; 47                          ;
-;     CLR               ; 25                          ;
+; cycloneiii_ff         ; 46                          ;
+;     CLR               ; 24                          ;
 ;     ENA CLR SCLR      ; 6                           ;
 ;     plain             ; 16                          ;
-; cycloneiii_lcell_comb ; 38                          ;
+; cycloneiii_lcell_comb ; 37                          ;
 ;     arith             ; 20                          ;
 ;         2 data inputs ; 5                           ;
 ;         3 data inputs ; 15                          ;
-;     normal            ; 18                          ;
+;     normal            ; 17                          ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 7                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 10                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.58                        ;
+; Average LUT depth     ; 1.52                        ;
 +-----------------------+-----------------------------+
 
 
@@ -327,7 +325,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -337,7 +335,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Sun Jan  4 22:53:45 2026
+    Info: Processing started: Sun Jan  4 23:09:13 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto_2 -c projeto_2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -352,21 +350,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file tb_TOP.
 Info (12127): Elaborating entity "TOP" for the top level hierarchy
 Info (12128): Elaborating entity "Acumulador" for hierarchy "Acumulador:InstACC" File: /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/TOP.v Line: 15
 Info (12128): Elaborating entity "FSM" for hierarchy "FSM:InstFSM" File: /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/TOP.v Line: 18
-Warning (10270): Verilog HDL Case Statement warning at FSM.v(100): incomplete case statement has no default case item File: /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/FSM.v Line: 100
-Info (10264): Verilog HDL Case Statement information at FSM.v(100): all case item expressions in this case statement are onehot File: /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/FSM.v Line: 100
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 99 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 58 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info (21061): Implemented 57 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 455 megabytes
-    Info: Processing ended: Sun Jan  4 22:53:53 2026
+    Info: Processing ended: Sun Jan  4 23:09:21 2026
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:20
 
 

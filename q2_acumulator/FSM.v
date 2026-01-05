@@ -4,17 +4,17 @@ module FSM (Clock, Reset, Address, ReadEnable, WriteEnable, Load, Clear, Transfe
 	output reg [5:0] Address;
 	output reg ReadEnable, WriteEnable, Load, Clear, Transfer, Ready;
 
-	localparam INICIO = 4'd0;
-	localparam SOLICITA_MEM = 4'd1;
-	localparam IDLE_1 = 4'd2;
-	localparam LOAD = 4'd3;
-	localparam ADD = 4'd4;
-	localparam ADDING = 4'd5;
-	localparam SAVING = 4'd6;
-	localparam IDLE_2 = 4'd7;
-	localparam READY  = 4'd8;
+	localparam INICIO = 3'd0;
+	localparam SOLICITA_MEM = 3'd1;
+	localparam IDLE_1 = 3'd2;
+	localparam LOAD = 3'd3;
+	localparam ADD = 3'd4;
+	localparam ADDING = 3'd5;
+	localparam SAVING = 3'd5;
+	localparam IDLE_2 = 3'd6;
+	localparam READY  = 3'd7;
 
-	reg [3:0] current_state, next_state;
+	reg [2:0] current_state, next_state;
 
 	reg [5:0] i;
 
@@ -62,11 +62,7 @@ module FSM (Clock, Reset, Address, ReadEnable, WriteEnable, Load, Clear, Transfe
 				if (i[2:0] == 3'b111) 
 					next_state = SAVING;
 				else 
-					next_state = ADDING;
-			end
-
-			ADDING: begin
-				next_state = SOLICITA_MEM;
+					next_state = SOLICITA_MEM;
 			end
 
 			SAVING: begin
@@ -107,7 +103,6 @@ module FSM (Clock, Reset, Address, ReadEnable, WriteEnable, Load, Clear, Transfe
 				Address = i;
 			end
 			ADD:          Transfer = 1'b1;
-			// ADDING: Nenhuma saída ativa
 			SAVING:       begin WriteEnable = 1'b1; Address = i; end
 			IDLE_2:       begin Clear = 1'b0; Address = i; end
 			READY:  Ready = 1'b1;
