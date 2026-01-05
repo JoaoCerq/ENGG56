@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto_2
-Sun Jan  4 23:09:21 2026
+Mon Jan  5 18:57:22 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -48,7 +48,7 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jan  4 23:09:21 2026           ;
+; Analysis & Synthesis Status        ; Successful - Mon Jan  5 18:57:22 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; projeto_2                                       ;
 ; Top-level Entity Name              ; TOP                                             ;
@@ -164,7 +164,8 @@ on the Quartus Prime software download page.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -179,36 +180,36 @@ on the Quartus Prime software download page.
 +----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                 ;
-+---------------------------------------------+-------------------------------+
-; Resource                                    ; Usage                         ;
-+---------------------------------------------+-------------------------------+
-; Estimated Total logic elements              ; 57                            ;
-;                                             ;                               ;
-; Total combinational functions               ; 37                            ;
-; Logic element usage by number of LUT inputs ;                               ;
-;     -- 4 input functions                    ; 10                            ;
-;     -- 3 input functions                    ; 18                            ;
-;     -- <=2 input functions                  ; 9                             ;
-;                                             ;                               ;
-; Logic elements by mode                      ;                               ;
-;     -- normal mode                          ; 17                            ;
-;     -- arithmetic mode                      ; 20                            ;
-;                                             ;                               ;
-; Total registers                             ; 46                            ;
-;     -- Dedicated logic registers            ; 46                            ;
-;     -- I/O registers                        ; 0                             ;
-;                                             ;                               ;
-; I/O pins                                    ; 42                            ;
-;                                             ;                               ;
-; Embedded Multiplier 9-bit elements          ; 0                             ;
-;                                             ;                               ;
-; Maximum fan-out node                        ; FSM:InstFSM|current_state.ADD ;
-; Maximum fan-out                             ; 23                            ;
-; Total fan-out                               ; 310                           ;
-; Average fan-out                             ; 1.86                          ;
-+---------------------------------------------+-------------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 57          ;
+;                                             ;             ;
+; Total combinational functions               ; 37          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 10          ;
+;     -- 3 input functions                    ; 18          ;
+;     -- <=2 input functions                  ; 9           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 17          ;
+;     -- arithmetic mode                      ; 20          ;
+;                                             ;             ;
+; Total registers                             ; 46          ;
+;     -- Dedicated logic registers            ; 46          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 42          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; Clock~input ;
+; Maximum fan-out                             ; 46          ;
+; Total fan-out                               ; 342         ;
+; Average fan-out                             ; 2.05        ;
++---------------------------------------------+-------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -262,7 +263,7 @@ Encoding Type:  One-Hot
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 30    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 6     ;
+; Number of registers using Clock Enable       ; 38    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -302,9 +303,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; boundary_port         ; 42                          ;
 ; cycloneiii_ff         ; 46                          ;
-;     CLR               ; 24                          ;
+;     CLR               ; 8                           ;
+;     ENA               ; 16                          ;
+;     ENA CLR           ; 16                          ;
 ;     ENA CLR SCLR      ; 6                           ;
-;     plain             ; 16                          ;
 ; cycloneiii_lcell_comb ; 37                          ;
 ;     arith             ; 20                          ;
 ;         2 data inputs ; 5                           ;
@@ -316,7 +318,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 10                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.52                        ;
+; Average LUT depth     ; 1.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -335,7 +337,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Sun Jan  4 23:09:13 2026
+    Info: Processing started: Mon Jan  5 18:57:14 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto_2 -c projeto_2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -360,9 +362,9 @@ Info (21057): Implemented 99 device resources after synthesis - the final resour
     Info (21059): Implemented 24 output pins
     Info (21061): Implemented 57 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 455 megabytes
-    Info: Processing ended: Sun Jan  4 23:09:21 2026
+    Info: Peak virtual memory: 488 megabytes
+    Info: Processing ended: Mon Jan  5 18:57:22 2026
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:18
 
 

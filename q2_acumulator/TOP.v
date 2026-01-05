@@ -12,7 +12,7 @@ module TOP (Clock, Reset, Ready, Address, DataIN, ReadEnable, WriteEnable, DataO
    wire Clear;     
    wire Transfer;  
 
-   Acumulador InstACC (.Load(Load), .Clear(Clear), .Transfer(Transfer), .M(DataOut), .Saidas(DataIN));
+   Acumulador InstACC (.Clock(Clock), .Load(Load), .Clear(Clear), .Transfer(Transfer), .M(DataOut), .Saidas(DataIN));
 
    FSM InstFSM (.Clock(Clock), .Reset(Reset), .Address(Address), .ReadEnable(ReadEnable), .WriteEnable(WriteEnable), 
 	.Load(Load), .Clear(Clear), .Transfer(Transfer), .Ready(Ready));

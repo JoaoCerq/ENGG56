@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'FSM:InstFSM|current_state.ADD'
+Slack : -1.854
+TNS   : -21.208
+
+Type  : Slow 1200mV 85C Model Setup 'Clock'
+Slack : -1.621
+TNS   : -13.129
+
+Type  : Slow 1200mV 85C Model Hold 'Clock'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FSM:InstFSM|current_state.ADD'
+Slack : 0.655
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'FSM:InstFSM|current_state.ADD'
+Slack : -1.439
+TNS   : -23.024
+
+Type  : Slow 1200mV 85C Model Removal 'FSM:InstFSM|current_state.ADD'
+Slack : 1.550
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM:InstFSM|current_state.ADD'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM:InstFSM|current_state.LOAD'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock'
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'FSM:InstFSM|current_state.ADD'
+Slack : -1.584
+TNS   : -17.513
+
+Type  : Slow 1200mV 0C Model Setup 'Clock'
+Slack : -1.391
+TNS   : -11.479
+
+Type  : Slow 1200mV 0C Model Hold 'Clock'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FSM:InstFSM|current_state.ADD'
+Slack : 0.599
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'FSM:InstFSM|current_state.ADD'
+Slack : -1.217
+TNS   : -19.472
+
+Type  : Slow 1200mV 0C Model Removal 'FSM:InstFSM|current_state.ADD'
+Slack : 1.418
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM:InstFSM|current_state.ADD'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM:InstFSM|current_state.LOAD'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : 0.317
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Clock'
+Slack : -0.696
+TNS   : -5.410
+
+Type  : Fast 1200mV 0C Model Setup 'FSM:InstFSM|current_state.ADD'
+Slack : -0.381
+TNS   : -2.508
+
+Type  : Fast 1200mV 0C Model Hold 'Clock'
+Slack : 0.196
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FSM:InstFSM|current_state.ADD'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'FSM:InstFSM|current_state.ADD'
+Slack : -0.275
+TNS   : -4.400
+
+Type  : Fast 1200mV 0C Model Removal 'FSM:InstFSM|current_state.ADD'
+Slack : 0.790
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:InstFSM|current_state.ADD'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:InstFSM|current_state.LOAD'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

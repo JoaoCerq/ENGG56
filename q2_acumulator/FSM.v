@@ -9,7 +9,6 @@ module FSM (Clock, Reset, Address, ReadEnable, WriteEnable, Load, Clear, Transfe
 	localparam IDLE_1 = 3'd2;
 	localparam LOAD = 3'd3;
 	localparam ADD = 3'd4;
-	localparam ADDING = 3'd5;
 	localparam SAVING = 3'd5;
 	localparam IDLE_2 = 3'd6;
 	localparam READY  = 3'd7;
