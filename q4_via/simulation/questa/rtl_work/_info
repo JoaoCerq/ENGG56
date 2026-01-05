@@ -1,0 +1,77 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/joao-cerqueira/Documents/ENGG56/q4_via/simulation/questa
+T_opt
+!i145 1
+!i144 0
+!s110 1767577408
+VEmcFzSne7k13X`L7U[^Ti3
+04 9 4 work tb_q4_via fast 0
+=1-0045e296ff67-695b1740-61b0-5e1b
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U2 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2025.2;82
+vq4_via
+2/home/joao-cerqueira/Documents/ENGG56/q4_via/q4_via.v
+Z3 !s110 1767577407
+!i10b 1
+!s100 H2K9QRkUf=Ta8^FjNoiiB1
+IHT7?N;DdFOY?FG<>CY1T^3
+R1
+w1767576690
+8/home/joao-cerqueira/Documents/ENGG56/q4_via/q4_via.v
+F/home/joao-cerqueira/Documents/ENGG56/q4_via/q4_via.v
+!i122 0
+L0 1 9
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2025.2;82
+r1
+!s85 0
+31
+Z6 !s108 1767577407.000000
+!s107 /home/joao-cerqueira/Documents/ENGG56/q4_via/q4_via.v|
+!s90 -reportprogress|300|-work|work|+incdir+/home/joao-cerqueira/Documents/ENGG56/q4_via|/home/joao-cerqueira/Documents/ENGG56/q4_via/q4_via.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -work work +incdir+/home/joao-cerqueira/Documents/ENGG56/q4_via -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtb_q4_via
+2/home/joao-cerqueira/Documents/ENGG56/q4_via/tb_q4_via.v
+R3
+!i10b 1
+!s100 M1KB^j3W44RURzG0C09Bo0
+IFG?=IiCjFLQEd=:db5SMW2
+R1
+w1767577126
+8/home/joao-cerqueira/Documents/ENGG56/q4_via/tb_q4_via.v
+F/home/joao-cerqueira/Documents/ENGG56/q4_via/tb_q4_via.v
+!i122 1
+L0 3 35
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/joao-cerqueira/Documents/ENGG56/q4_via/tb_q4_via.v|
+!s90 -reportprogress|300|-work|work|+incdir+/home/joao-cerqueira/Documents/ENGG56/q4_via|/home/joao-cerqueira/Documents/ENGG56/q4_via/tb_q4_via.v|
+!i113 0
+R7
+R8
+R2
