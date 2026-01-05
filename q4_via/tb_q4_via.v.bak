@@ -1,0 +1,67 @@
+`timescale 1ns/1ps
+
+module tb_q4_via;
+
+  reg  A, B, C, D;
+  wire N_S, L_O;
+
+  // UUT (use o mesmo nome do seu módulo)
+  TrafficController uut (
+    .A(A), .B(B), .C(C), .D(D),
+    .N_S(N_S), .L_O(L_O)
+  );
+
+  integer i;
+  reg exp_NS, exp_LO;
+
+  // Funções esperadas (de acordo com as regras do enunciado + exclusividade)
+  // N_S = (A or B) AND (C=0 and D=0)
+  // L_O = NOT(N_S)  (garante que nunca ficam ambos 0 ou ambos 1)
+  task compute_expected;
+    input reg a,b,c,d;
+    begin
+      exp_NS = (a | b) & (~c & ~d);
+      exp_LO = ~exp_NS;
+    end
+  endtask
+
+  task apply_and_check;
+    input reg a,b,c,d;
+    begin
+      A = a; B = b; C = c; D = d;
+      #1; // tempo para estabilizar (combinacional)
+
+      compute_expected(a,b,c,d);
+
+      // Checa regra de não ter ambos verdes ou ambos vermelhos
+      if ((N_S === L_O) || (N_S === 1'bx) || (L_O === 1'bx)) begin
+        $display("[FAIL] Exclusividade violada ou X: A=%0b B=%0b C=%0b D=%0b -> N_S=%0b L_O=%0b",
+                 A,B,C,D,N_S,L_O);
+        $stop;
+      end
+
+      // Checa saídas esperadas
+      if ((N_S !== exp_NS) || (L_O !== exp_LO)) begin
+        $display("[FAIL] Saida incorreta: A=%0b B=%0b C=%0b D=%0b -> N_S=%0b L_O=%0b (esperado N_S=%0b L_O=%0b)",
+                 A,B,C,D,N_S,L_O,exp_NS,exp_LO);
+        $stop;
+      end else begin
+        $display("[PASS] A=%0b B=%0b C=%0b D=%0b -> N_S=%0b L_O=%0b",
+                 A,B,C,D,N_S,L_O);
+      end
+    end
+  endtask
+
+  initial begin
+    $display("==== Testbench TrafficController: varrendo todas as combinacoes ABCD ====");
+
+    // Varre todas as 16 combinações
+    for (i = 0; i < 16; i = i + 1) begin
+      apply_and_check(i[3], i[2], i[1], i[0]); // A B C D
+    end
+
+    $display("==== Todos os testes passaram (16/16) ====");
+    $stop;
+  end
+
+endmodule

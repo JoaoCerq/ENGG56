@@ -1,0 +1,9 @@
+|q4_via
+A => N_S.IN0
+B => N_S.IN1
+C => N_S.IN0
+D => N_S.IN1
+N_S << N_S.DB_MAX_OUTPUT_PORT_TYPE
+L_O << N_S.DB_MAX_OUTPUT_PORT_TYPE
+
+

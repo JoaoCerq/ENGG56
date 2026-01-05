@@ -1,0 +1,9 @@
+module q4_via(A, B, C, D, N_S, L_O);
+    input A, B, C, D;
+    output wire N_S, L_O;
+	 
+    assign N_S = (A | B) & (~C & ~D);
+
+    assign L_O = ~N_S;
+
+endmodule

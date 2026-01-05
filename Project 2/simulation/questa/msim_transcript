@@ -50057,3 +50057,5 @@ run -all
 # ** Note: $stop    : /home/joao-cerqueira/Documents/ENGG56/Project 2/tb_TOP.v(120)
 #    Time: 5870 ns  Iteration: 1  Instance: /tb_TOP
 # Break in Module tb_TOP at /home/joao-cerqueira/Documents/ENGG56/Project 2/tb_TOP.v line 120
+# End time: 01:54:15 on Jan 04,2026, Elapsed time: 3:08:06
+# Errors: 0, Warnings: 2
