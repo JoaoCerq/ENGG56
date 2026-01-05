@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto_2
-Sat Jan  3 20:14:46 2026
+Sun Jan  4 22:53:53 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -48,7 +48,7 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jan  3 20:14:46 2026           ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan  4 22:53:53 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; projeto_2                                       ;
 ; Top-level Entity Name              ; TOP                                             ;
@@ -164,19 +164,20 @@ on the Quartus Prime software download page.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; TOP.v                            ; yes             ; User Verilog HDL File  ; /home/joao-cerqueira/Documents/ENGG56/Project 2/TOP.v        ;         ;
-; Acumulador.v                     ; yes             ; User Verilog HDL File  ; /home/joao-cerqueira/Documents/ENGG56/Project 2/Acumulador.v ;         ;
-; FSM.v                            ; yes             ; User Verilog HDL File  ; /home/joao-cerqueira/Documents/ENGG56/Project 2/FSM.v        ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+; TOP.v                            ; yes             ; User Verilog HDL File  ; /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/TOP.v        ;         ;
+; Acumulador.v                     ; yes             ; User Verilog HDL File  ; /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/Acumulador.v ;         ;
+; FSM.v                            ; yes             ; User Verilog HDL File  ; /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/FSM.v        ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------+
@@ -326,7 +327,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -336,23 +337,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Sat Jan  3 20:14:38 2026
+    Info: Processing started: Sun Jan  4 22:53:45 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto_2 -c projeto_2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file TOP.v
-    Info (12023): Found entity 1: TOP File: /home/joao-cerqueira/Documents/ENGG56/Project 2/TOP.v Line: 1
+    Info (12023): Found entity 1: TOP File: /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/TOP.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Acumulador.v
-    Info (12023): Found entity 1: Acumulador File: /home/joao-cerqueira/Documents/ENGG56/Project 2/Acumulador.v Line: 1
+    Info (12023): Found entity 1: Acumulador File: /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/Acumulador.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file FSM.v
-    Info (12023): Found entity 1: FSM File: /home/joao-cerqueira/Documents/ENGG56/Project 2/FSM.v Line: 1
+    Info (12023): Found entity 1: FSM File: /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/FSM.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_TOP.v
-    Info (12023): Found entity 1: tb_TOP File: /home/joao-cerqueira/Documents/ENGG56/Project 2/tb_TOP.v Line: 3
+    Info (12023): Found entity 1: tb_TOP File: /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/tb_TOP.v Line: 3
 Info (12127): Elaborating entity "TOP" for the top level hierarchy
-Info (12128): Elaborating entity "Acumulador" for hierarchy "Acumulador:InstACC" File: /home/joao-cerqueira/Documents/ENGG56/Project 2/TOP.v Line: 15
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:InstFSM" File: /home/joao-cerqueira/Documents/ENGG56/Project 2/TOP.v Line: 18
-Warning (10270): Verilog HDL Case Statement warning at FSM.v(100): incomplete case statement has no default case item File: /home/joao-cerqueira/Documents/ENGG56/Project 2/FSM.v Line: 100
-Info (10264): Verilog HDL Case Statement information at FSM.v(100): all case item expressions in this case statement are onehot File: /home/joao-cerqueira/Documents/ENGG56/Project 2/FSM.v Line: 100
+Info (12128): Elaborating entity "Acumulador" for hierarchy "Acumulador:InstACC" File: /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/TOP.v Line: 15
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:InstFSM" File: /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/TOP.v Line: 18
+Warning (10270): Verilog HDL Case Statement warning at FSM.v(100): incomplete case statement has no default case item File: /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/FSM.v Line: 100
+Info (10264): Verilog HDL Case Statement information at FSM.v(100): all case item expressions in this case statement are onehot File: /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/FSM.v Line: 100
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
@@ -364,8 +365,8 @@ Info (21057): Implemented 100 device resources after synthesis - the final resou
     Info (21061): Implemented 58 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 455 megabytes
-    Info: Processing ended: Sat Jan  3 20:14:46 2026
+    Info: Processing ended: Sun Jan  4 22:53:53 2026
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Total CPU time (on all processors): 00:00:21
 
 
