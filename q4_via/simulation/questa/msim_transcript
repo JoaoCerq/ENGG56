@@ -26,32 +26,32 @@
 # 
 # vlog  -work work +incdir+/home/joao-cerqueira/Documents/ENGG56/q4_via {/home/joao-cerqueira/Documents/ENGG56/q4_via/q4_via.v}
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 20:08:51 on Jan 05,2026
+# Start time: 20:24:04 on Jan 05,2026
 # vlog -reportprogress 300 -work work "+incdir+/home/joao-cerqueira/Documents/ENGG56/q4_via" /home/joao-cerqueira/Documents/ENGG56/q4_via/q4_via.v 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling module q4_via
 # 
 # Top level modules:
 # 	q4_via
-# End time: 20:08:51 on Jan 05,2026, Elapsed time: 0:00:00
+# End time: 20:24:04 on Jan 05,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog  -work work +incdir+/home/joao-cerqueira/Documents/ENGG56/q4_via {/home/joao-cerqueira/Documents/ENGG56/q4_via/tb_q4_via.v}
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 20:08:51 on Jan 05,2026
+# Start time: 20:24:04 on Jan 05,2026
 # vlog -reportprogress 300 -work work "+incdir+/home/joao-cerqueira/Documents/ENGG56/q4_via" /home/joao-cerqueira/Documents/ENGG56/q4_via/tb_q4_via.v 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling module tb_q4_via
 # 
 # Top level modules:
 # 	tb_q4_via
-# End time: 20:08:51 on Jan 05,2026, Elapsed time: 0:00:00
+# End time: 20:24:04 on Jan 05,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_q4_via
 # ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_q4_via 
-# Start time: 20:08:51 on Jan 05,2026
+# Start time: 20:24:04 on Jan 05,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
@@ -91,5 +91,5 @@
 # ** Note: $stop    : /home/joao-cerqueira/Documents/ENGG56/q4_via/tb_q4_via.v(34)
 #    Time: 16 ns  Iteration: 0  Instance: /tb_q4_via
 # Break in Module tb_q4_via at /home/joao-cerqueira/Documents/ENGG56/q4_via/tb_q4_via.v line 34
-# End time: 20:09:10 on Jan 05,2026, Elapsed time: 0:00:19
+# End time: 20:24:21 on Jan 05,2026, Elapsed time: 0:00:17
 # Errors: 0, Warnings: 1

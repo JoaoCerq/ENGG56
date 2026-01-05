@@ -1,5 +1,5 @@
 Fitter report for q4_via
-Mon Jan  5 20:08:25 2026
+Mon Jan  5 20:23:47 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -63,7 +63,7 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Jan  5 20:08:25 2026           ;
+; Fitter Status                      ; Successful - Mon Jan  5 20:23:47 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; q4_via                                          ;
 ; Top-level Entity Name              ; q4_via                                          ;
@@ -1481,13 +1481,13 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /home/joao-cerqueira/Documents/ENGG56/q4_via/output_files/q4_via.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1726 megabytes
-    Info: Processing ended: Mon Jan  5 20:08:25 2026
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 1722 megabytes
+    Info: Processing ended: Mon Jan  5 20:23:47 2026
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +----------------------------+

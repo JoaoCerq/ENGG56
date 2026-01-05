@@ -10,70 +10,70 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dC:/pcid_trab/q3_mpeg/simulation/questa
+Z1 d/home/joao-cerqueira/Documents/ENGG56/q3_mpeg/simulation/questa
 T_opt
 !i145 1
 !i144 0
-!s110 1767126309
-ViM3jl?G0Val[oVR70ZXdB3
+Z2 !s110 1767655379
+VSYOYZhXU[W^foTnnjzDgd1
 04 14 4 work FSM_Control_tb fast 0
-=1-107c61a59fc8-69543525-19f-73e8
+=1-0045e296ff67-695c47d3-4c157-1c531
 R0
 !s12f OEM100
 !s12b OEM100
 !s124 OEM10U2 
 !s135 nogc
 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
-tCvgOpt 0 defaultOptions 1107585188
+Z3 tCvgOpt 0
 n@_opt
 OL;O;2025.2;82
 vFSM_Control
-2C:/pcid_trab/q3_mpeg/FSM_Control.v
-Z2 !s110 1767126308
+2/home/joao-cerqueira/Documents/ENGG56/q3_mpeg/FSM_Control.v
+R2
 !i10b 1
 !s100 3^TCjLGQZW<iUCKd^Q_563
-IMn;NnSHlQT;RiaUAf<<kT3
+I`T_^]HKWD^nCAiQIW2i^d3
 R1
-w1767124250
-8C:/pcid_trab/q3_mpeg/FSM_Control.v
-FC:/pcid_trab/q3_mpeg/FSM_Control.v
+Z4 w1767492175
+8/home/joao-cerqueira/Documents/ENGG56/q3_mpeg/FSM_Control.v
+F/home/joao-cerqueira/Documents/ENGG56/q3_mpeg/FSM_Control.v
 !i122 0
 L0 1 97
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-Z4 OL;L;2025.2;82
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z5 !s108 1767126308.000000
-!s107 C:/pcid_trab/q3_mpeg/FSM_Control.v|
-!s90 -reportprogress|300|-work|work|+incdir+C:/pcid_trab/q3_mpeg|C:/pcid_trab/q3_mpeg/FSM_Control.v|
+Z7 !s108 1767655379.000000
+!s107 /home/joao-cerqueira/Documents/ENGG56/q3_mpeg/FSM_Control.v|
+!s90 -reportprogress|300|-work|work|+incdir+/home/joao-cerqueira/Documents/ENGG56/q3_mpeg|/home/joao-cerqueira/Documents/ENGG56/q3_mpeg/FSM_Control.v|
 !i113 0
-Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z7 !s92 -work work +incdir+C:/pcid_trab/q3_mpeg -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z8 tCvgOpt 0 defaultOptions 1085333592
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -work work +incdir+/home/joao-cerqueira/Documents/ENGG56/q3_mpeg -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
 n@f@s@m_@control
 vFSM_Control_tb
-2C:/pcid_trab/q3_mpeg/FSM_Control_tb.v
+2/home/joao-cerqueira/Documents/ENGG56/q3_mpeg/FSM_Control_tb.v
 R2
 !i10b 1
 !s100 5ndhTWjPzz[:O0FX_JEOJ1
-I0SV>V1^3X5Ln5KA9Jj^cD2
+IWIc3oNcD=QaE=7eUL_Y4Q1
 R1
-w1767126176
-8C:/pcid_trab/q3_mpeg/FSM_Control_tb.v
-FC:/pcid_trab/q3_mpeg/FSM_Control_tb.v
+R4
+8/home/joao-cerqueira/Documents/ENGG56/q3_mpeg/FSM_Control_tb.v
+F/home/joao-cerqueira/Documents/ENGG56/q3_mpeg/FSM_Control_tb.v
 !i122 1
 L0 3 86
-R3
-R4
+R5
+R6
 r1
 !s85 0
 31
-R5
-!s107 C:/pcid_trab/q3_mpeg/FSM_Control_tb.v|
-!s90 -reportprogress|300|-work|work|+incdir+C:/pcid_trab/q3_mpeg|C:/pcid_trab/q3_mpeg/FSM_Control_tb.v|
-!i113 0
-R6
 R7
+!s107 /home/joao-cerqueira/Documents/ENGG56/q3_mpeg/FSM_Control_tb.v|
+!s90 -reportprogress|300|-work|work|+incdir+/home/joao-cerqueira/Documents/ENGG56/q3_mpeg|/home/joao-cerqueira/Documents/ENGG56/q3_mpeg/FSM_Control_tb.v|
+!i113 0
 R8
+R9
+R3
 n@f@s@m_@control_tb
