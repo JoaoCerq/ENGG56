@@ -14,10 +14,10 @@ Z1 d/home/joao-cerqueira/Documents/ENGG56/q2_acumulator/simulation/questa
 T_opt
 !i145 1
 !i144 0
-Z2 !s110 1767655272
-VG_kR2A]oO9DgiYQCcR?J`0
+Z2 !s110 1767663298
+V@fggdeo>fGM2:;W^_QELP2
 04 6 4 work tb_TOP fast 0
-=1-0045e296ff67-695c4768-b2d48-1c41d
+=1-0045e296ff67-695c66c2-68519-229ec
 R0
 !s12f OEM100
 !s12b OEM100
@@ -34,7 +34,7 @@ R2
 !s100 C9<NEc7Ll2]^jmGZ3PoZ^0
 Ie?_`amAH_=Tn5Ca<GQ?0I3
 R1
-w1767650171
+w1767662262
 8/home/joao-cerqueira/Documents/ENGG56/q2_acumulator/Acumulador.v
 F/home/joao-cerqueira/Documents/ENGG56/q2_acumulator/Acumulador.v
 !i122 1
@@ -44,7 +44,7 @@ Z5 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z6 !s108 1767655272.000000
+Z6 !s108 1767663298.000000
 !s107 /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/Acumulador.v|
 !s90 -reportprogress|300|-work|work|+incdir+/home/joao-cerqueira/Documents/ENGG56/q2_acumulator|/home/joao-cerqueira/Documents/ENGG56/q2_acumulator/Acumulador.v|
 !i113 0
@@ -119,7 +119,7 @@ R5
 r1
 !s85 0
 31
-R6
+!s108 1767663297.000000
 !s107 /home/joao-cerqueira/Documents/ENGG56/q2_acumulator/TOP.v|
 !s90 -reportprogress|300|-work|work|+incdir+/home/joao-cerqueira/Documents/ENGG56/q2_acumulator|/home/joao-cerqueira/Documents/ENGG56/q2_acumulator/TOP.v|
 !i113 0
